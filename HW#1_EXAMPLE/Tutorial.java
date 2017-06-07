@@ -26,8 +26,6 @@ public class Tutorial {
 
     Logger.getLogger("org").setLevel(Level.ERROR);
     Logger.getLogger("akka").setLevel(Level.ERROR);
-    String sparkHome = "/Users/msalloum/spark-2.0.0-bin-hadoop2.7";
-    String jarFile = "target/scala-2.11/tutorial_2.11-0.1-SNAPSHOT.jar";
    
     // Configuring Twitter credentials 
     String consumerKey = "FgXImus1bXVMREkethe8Q";
@@ -98,13 +96,13 @@ public class Tutorial {
     statuses.print();
     jssc.start();
 
-    while (numberInst < 100){
+    while (numberInst < 1000){
         jssc.awaitTerminationOrTimeout(1000); // 1 second polling time, you can change it as per your usecase
     }
 
     jssc.stop();
-    System.out.println("WeAreUK: "  + filter.contains("WeAreUK"));
-    System.out.println("DS504: " + filter.contains("DS504"));
+    System.out.println("Test if 'WeAreUK' in stream: "  + filter.contains("WeAreUK"));
+    System.out.println("Test if '#DS504' in stream: " + filter.contains("DS504"));
 
 }
 
