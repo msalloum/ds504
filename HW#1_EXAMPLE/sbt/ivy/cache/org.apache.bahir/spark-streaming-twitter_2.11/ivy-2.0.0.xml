@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:m="http://ant.apache.org/ivy/maven" xmlns:e="http://ant.apache.org/ivy/extra">
+	<info organisation="org.apache.bahir"
+		module="spark-streaming-twitter_2.11"
+		revision="2.0.0"
+		status="release"
+		publication="20160806030218"
+	>
+		<license name="Apache 2.0 License" url="http://www.apache.org/licenses/LICENSE-2.0.html" />
+		<description homepage="http://bahir.apache.org/" />
+		<m:dependency.management__org.scalacheck__scalacheck_2.11__scope>test</m:dependency.management__org.scalacheck__scalacheck_2.11__scope>
+		<m:properties__akka.group>com.typesafe.akka</m:properties__akka.group>
+		<m:dependency.management__log4j__log4j__scope>compile</m:dependency.management__log4j__log4j__scope>
+		<m:properties__akka.version>2.3.15</m:properties__akka.version>
+		<m:dependency.management__org.apache.spark__spark-tags_2.11__version>2.0.0</m:dependency.management__org.apache.spark__spark-tags_2.11__version>
+		<m:dependency.management__org.scalatest__scalatest_2.11__scope>test</m:dependency.management__org.scalatest__scalatest_2.11__scope>
+		<m:properties__maven.version>3.3.9</m:properties__maven.version>
+		<m:properties__MaxPermGen>512m</m:properties__MaxPermGen>
+		<m:dependency.management__com.typesafe.akka__akka-remote_2.11__version>2.3.15</m:dependency.management__com.typesafe.akka__akka-remote_2.11__version>
+		<m:dependency.management__junit__junit__scope>test</m:dependency.management__junit__junit__scope>
+		<m:properties__project.reporting.outputEncoding>UTF-8</m:properties__project.reporting.outputEncoding>
+		<m:properties__test.java.home>${java.home}</m:properties__test.java.home>
+		<m:properties__distMgmtSnapshotsUrl>https://repository.apache.org/content/repositories/snapshots</m:properties__distMgmtSnapshotsUrl>
+		<m:dependency.management__org.apache.spark__spark-core_2.11__exclusion_0>org.eclipse.jetty__jetty-plus</m:dependency.management__org.apache.spark__spark-core_2.11__exclusion_0>
+		<m:dependency.management__org.apache.spark__spark-core_2.11__exclusion_1>org.eclipse.jetty__jetty-security</m:dependency.management__org.apache.spark__spark-core_2.11__exclusion_1>
+		<m:dependency.management__org.apache.spark__spark-core_2.11__version>2.0.0</m:dependency.management__org.apache.spark__spark-core_2.11__version>
+		<m:dependency.management__org.apache.spark__spark-core_2.11__exclusion_2>org.eclipse.jetty__jetty-util</m:dependency.management__org.apache.spark__spark-core_2.11__exclusion_2>
+		<m:properties__scala.binary.version>2.11</m:properties__scala.binary.version>
+		<m:properties__spark.test.home>${session.executionRootDirectory}</m:properties__spark.test.home>
+		<m:dependency.management__org.apache.spark__spark-core_2.11__exclusion_3>org.eclipse.jetty__jetty-server</m:dependency.management__org.apache.spark__spark-core_2.11__exclusion_3>
+		<m:properties__PermGen>64m</m:properties__PermGen>
+		<m:properties__slf4j.version>1.7.16</m:properties__slf4j.version>
+		<m:dependency.management__org.apache.spark__spark-core_2.11__exclusion_4>org.eclipse.jetty__jetty-http</m:dependency.management__org.apache.spark__spark-core_2.11__exclusion_4>
+		<m:dependency.management__org.apache.spark__spark-core_2.11__exclusion_5>org.eclipse.jetty__jetty-continuation</m:dependency.management__org.apache.spark__spark-core_2.11__exclusion_5>
+		<m:properties__gpg.useagent>true</m:properties__gpg.useagent>
+		<m:dependency.management__org.apache.spark__spark-core_2.11__exclusion_6>org.eclipse.jetty__jetty-servlet</m:dependency.management__org.apache.spark__spark-core_2.11__exclusion_6>
+		<m:dependency.management__org.apache.spark__spark-core_2.11__exclusion_7>org.eclipse.jetty__jetty-servlets</m:dependency.management__org.apache.spark__spark-core_2.11__exclusion_7>
+		<m:dependency.management__org.mockito__mockito-core__version>1.10.19</m:dependency.management__org.mockito__mockito-core__version>
+		<m:properties__scala.version>2.11.8</m:properties__scala.version>
+		<m:dependency.management__org.scala-lang__scala-library__version>2.11.8</m:dependency.management__org.scala-lang__scala-library__version>
+		<m:dependency.management__org.scala-lang__scalap__version>2.11.8</m:dependency.management__org.scala-lang__scalap__version>
+		<m:dependency.management__org.hamcrest__hamcrest-core__scope>test</m:dependency.management__org.hamcrest__hamcrest-core__scope>
+		<m:dependency.management__org.hamcrest__hamcrest-library__scope>test</m:dependency.management__org.hamcrest__hamcrest-library__scope>
+		<m:properties__CodeCacheSize>512m</m:properties__CodeCacheSize>
+		<m:dependency.management__xml-apis__xml-apis__version>1.4.01</m:dependency.management__xml-apis__xml-apis__version>
+		<m:properties__sbt.project.name>streaming-twitter</m:properties__sbt.project.name>
+		<m:properties__hadoop.deps.scope>compile</m:properties__hadoop.deps.scope>
+		<m:properties__protobuf.version>2.5.0</m:properties__protobuf.version>
+		<m:properties__jsr305.version>3.0.1</m:properties__jsr305.version>
+		<m:dependency.management__org.mockito__mockito-core__scope>test</m:dependency.management__org.mockito__mockito-core__scope>
+		<m:properties__build.copyDependenciesPhase>none</m:properties__build.copyDependenciesPhase>
+		<m:properties__spark.version>2.0.0</m:properties__spark.version>
+		<m:dependency.management__junit__junit__version>4.12</m:dependency.management__junit__junit__version>
+		<m:dependency.management__log4j__log4j__version>1.2.17</m:dependency.management__log4j__log4j__version>
+		<m:properties__organization.logo>https://www.apache.org/images/asf_logo_wide.gif</m:properties__organization.logo>
+		<m:dependency.management__org.scalacheck__scalacheck_2.11__version>1.12.5</m:dependency.management__org.scalacheck__scalacheck_2.11__version>
+		<m:dependency.management__org.apache.spark__spark-core_2.11__scope>test</m:dependency.management__org.apache.spark__spark-core_2.11__scope>
+		<m:dependency.management__com.typesafe.akka__akka-zeromq_2.11__exclusion_0>${akka.group}__akka-actor_${scala.binary.version}</m:dependency.management__com.typesafe.akka__akka-zeromq_2.11__exclusion_0>
+		<m:dependency.management__org.scala-lang__scala-compiler__version>2.11.8</m:dependency.management__org.scala-lang__scala-compiler__version>
+		<m:dependency.management__com.typesafe.akka__akka-zeromq_2.11__version>2.3.15</m:dependency.management__com.typesafe.akka__akka-zeromq_2.11__version>
+		<m:properties__java.version>1.7</m:properties__java.version>
+		<m:properties__build.testJarPhase>prepare-package</m:properties__build.testJarPhase>
+		<e:sbtTransformHash>12e9a7fd7c9a22ef6bf33d16816b2ffd09d735b5</e:sbtTransformHash>
+		<m:dependency.management__org.json4s__json4s-jackson_2.11__version>3.2.11</m:dependency.management__org.json4s__json4s-jackson_2.11__version>
+		<m:dependency.management__org.scala-lang__scala-reflect__version>2.11.8</m:dependency.management__org.scala-lang__scala-reflect__version>
+		<m:properties__maven.compiler.target>1.6</m:properties__maven.compiler.target>
+		<m:maven.plugins>org.apache.maven.plugins__maven-remote-resources-plugin__null|org.apache.maven.plugins__maven-site-plugin__null|org.apache.maven.plugins__maven-remote-resources-plugin__null|org.apache.maven.plugins__maven-site-plugin__null|org.apache.maven.plugins__maven-dependency-plugin__2.10|org.apache.maven.plugins__maven-enforcer-plugin__null|org.apache.rat__apache-rat-plugin__0.11|net.alchim31.maven__scala-maven-plugin__null|org.apache.maven.plugins__maven-source-plugin__null|org.codehaus.mojo__build-helper-maven-plugin__null|org.scalastyle__scalastyle-maven-plugin__0.8.0|org.apache.maven.plugins__maven-checkstyle-plugin__2.17|org.apache.maven.plugins__maven-antrun-plugin__null|org.apache.maven.plugins__maven-surefire-plugin__null|org.scalatest__scalatest-maven-plugin__null|org.apache.maven.plugins__maven-jar-plugin__null|org.apache.maven.plugins__maven-clean-plugin__null|org.apache.maven.plugins__maven-remote-resources-plugin__null|org.apache.maven.plugins__maven-site-plugin__null|org.apache.maven.plugins__maven-remote-resources-plugin__null|org.apache.maven.plugins__maven-site-plugin__null|org.apache.maven.plugins__maven-dependency-plugin__2.10|org.apache.maven.plugins__maven-enforcer-plugin__null|org.apache.rat__apache-rat-plugin__0.11|net.alchim31.maven__scala-maven-plugin__null|org.apache.maven.plugins__maven-source-plugin__null|org.codehaus.mojo__build-helper-maven-plugin__null|org.scalastyle__scalastyle-maven-plugin__0.8.0|org.apache.maven.plugins__maven-checkstyle-plugin__2.17|org.apache.maven.plugins__maven-antrun-plugin__null|org.apache.maven.plugins__maven-surefire-plugin__null|org.scalatest__scalatest-maven-plugin__null|org.apache.maven.plugins__maven-jar-plugin__null|org.apache.maven.plugins__maven-clean-plugin__null|org.apache.maven.plugins__maven-source-plugin__null</m:maven.plugins>
+		<m:dependency.management__com.google.protobuf__protobuf-java__version>2.5.0</m:dependency.management__com.google.protobuf__protobuf-java__version>
+		<m:dependency.management__xml-apis__xml-apis__scope>test</m:dependency.management__xml-apis__xml-apis__scope>
+		<m:dependency.management__com.typesafe.akka__akka-actor_2.11__version>2.3.15</m:dependency.management__com.typesafe.akka__akka-actor_2.11__version>
+		<m:dependency.management__org.scala-lang__scala-actors__version>2.11.8</m:dependency.management__org.scala-lang__scala-actors__version>
+		<m:dependency.management__org.hamcrest__hamcrest-library__version>1.3</m:dependency.management__org.hamcrest__hamcrest-library__version>
+		<m:properties__log4j.version>1.2.17</m:properties__log4j.version>
+		<m:properties__jars.target.dir>${project.build.directory}/scala-${scala.binary.version}/jars</m:properties__jars.target.dir>
+		<m:properties__project.build.sourceEncoding>UTF-8</m:properties__project.build.sourceEncoding>
+		<m:properties__surefire.version>2.19.1</m:properties__surefire.version>
+		<m:dependency.management__org.scalatest__scalatest_2.11__version>2.2.6</m:dependency.management__org.scalatest__scalatest_2.11__version>
+		<m:dependency.management__org.hamcrest__hamcrest-core__version>1.3</m:dependency.management__org.hamcrest__hamcrest-core__version>
+		<m:properties__distMgmtSnapshotsName>Apache Development Snapshot Repository</m:properties__distMgmtSnapshotsName>
+		<m:properties__sourceReleaseAssemblyDescriptor>source-release</m:properties__sourceReleaseAssemblyDescriptor>
+		<m:dependency.management__com.google.protobuf__protobuf-java__scope>compile</m:dependency.management__com.google.protobuf__protobuf-java__scope>
+		<m:dependency.management__com.google.code.findbugs__jsr305__version>3.0.1</m:dependency.management__com.google.code.findbugs__jsr305__version>
+		<m:properties__maven.compiler.source>1.6</m:properties__maven.compiler.source>
+		<m:dependency.management__org.apache.spark__spark-streaming_2.11__version>2.0.0</m:dependency.management__org.apache.spark__spark-streaming_2.11__version>
+	</info>
+	<configurations>
+		<conf name="default" visibility="public" description="runtime dependencies and master artifact can be used with this conf" extends="runtime,master"/>
+		<conf name="master" visibility="public" description="contains only the artifact published by this module itself, with no transitive dependencies"/>
+		<conf name="compile" visibility="public" description="this is the default scope, used if none is specified. Compile dependencies are available in all classpaths."/>
+		<conf name="provided" visibility="public" description="this is much like compile, but indicates you expect the JDK or a container to provide it. It is only available on the compilation classpath, and is not transitive."/>
+		<conf name="runtime" visibility="public" description="this scope indicates that the dependency is not required for compilation, but is for execution. It is in the runtime and test classpaths, but not the compile classpath." extends="compile"/>
+		<conf name="test" visibility="private" description="this scope indicates that the dependency is not required for normal use of the application, and is only available for the test compilation and execution phases." extends="runtime"/>
+		<conf name="system" visibility="public" description="this scope is similar to provided except that you have to provide the JAR which contains it explicitly. The artifact is always available and is not looked up in a repository."/>
+		<conf name="sources" visibility="public" description="this configuration contains the source artifact of this module, if any."/>
+		<conf name="javadoc" visibility="public" description="this configuration contains the javadoc artifact of this module, if any."/>
+		<conf name="optional" visibility="public" description="contains all optional dependencies"/>
+	</configurations>
+	<publications>
+		<artifact name="spark-streaming-twitter_2.11" type="jar" ext="jar" conf="master"/>
+	</publications>
+	<dependencies>
+		<dependency org="org.apache.spark" name="spark-tags_2.11" rev="2.0.0" force="true" conf="compile->compile(*),master(compile);runtime->runtime(*)"/>
+		<dependency org="org.apache.spark" name="spark-streaming_2.11" rev="2.0.0" force="true" conf="provided->compile(*),provided(*),runtime(*),master(compile)"/>
+		<dependency org="org.apache.spark" name="spark-core_2.11" rev="2.0.0" force="true" conf="test->runtime(*),master(compile)">
+			<artifact name="spark-core_2.11" type="test-jar" ext="jar" conf="" m:classifier="tests"/>
+			<exclude org="org.eclipse.jetty" module="jetty-plus" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.eclipse.jetty" module="jetty-security" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.eclipse.jetty" module="jetty-util" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.eclipse.jetty" module="jetty-server" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.eclipse.jetty" module="jetty-http" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.eclipse.jetty" module="jetty-continuation" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.eclipse.jetty" module="jetty-servlet" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.eclipse.jetty" module="jetty-servlets" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.twitter4j" name="twitter4j-stream" rev="4.0.4" force="true" conf="compile->compile(*),master(compile);runtime->runtime(*)"/>
+		<dependency org="org.scalacheck" name="scalacheck_2.11" rev="1.12.5" force="true" conf="test->runtime(*),master(compile)"/>
+		<dependency org="com.twitter" name="algebird-core_2.11" rev="0.11.0" force="true" conf="test->runtime(*),master(compile)"/>
+		<dependency org="org.spark-project.spark" name="unused" rev="1.0.0" force="true" conf="compile->compile(*),master(compile);runtime->runtime(*)"/>
+		<dependency org="org.scalatest" name="scalatest_2.11" rev="2.2.6" force="true" conf="test->runtime(*),master(compile)"/>
+		<dependency org="junit" name="junit" rev="4.12" force="true" conf="test->runtime(*),master(compile)"/>
+	</dependencies>
+</ivy-module>

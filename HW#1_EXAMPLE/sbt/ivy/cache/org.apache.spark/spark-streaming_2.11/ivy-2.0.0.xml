@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:m="http://ant.apache.org/ivy/maven" xmlns:e="http://ant.apache.org/ivy/extra">
+	<info organisation="org.apache.spark"
+		module="spark-streaming_2.11"
+		revision="2.0.0"
+		status="release"
+		publication="20160719160524"
+	>
+		<license name="Apache 2.0 License" url="http://www.apache.org/licenses/LICENSE-2.0.html" />
+		<description homepage="http://spark.apache.org/" />
+		<m:dependency.management__org.spark-project.hive__hive-beeline__exclusion_8>${hive.group}__hive-common</m:dependency.management__org.spark-project.hive__hive-beeline__exclusion_8>
+		<m:dependency.management__org.spark-project.hive__hive-beeline__exclusion_9>${hive.group}__hive-exec</m:dependency.management__org.spark-project.hive__hive-beeline__exclusion_9>
+		<m:dependency.management__org.apache.flume__flume-ng-sdk__version>1.6.0</m:dependency.management__org.apache.flume__flume-ng-sdk__version>
+		<m:dependency.management__org.spark-project.hive__hive-beeline__exclusion_6>${hive.group}__hive-jdbc</m:dependency.management__org.spark-project.hive__hive-beeline__exclusion_6>
+		<m:dependency.management__com.twitter__chill-java__version>0.8.0</m:dependency.management__com.twitter__chill-java__version>
+		<m:dependency.management__org.spark-project.hive__hive-beeline__exclusion_7>${hive.group}__hive-metastore</m:dependency.management__org.spark-project.hive__hive-beeline__exclusion_7>
+		<m:dependency.management__org.spark-project.hive__hive-beeline__exclusion_4>${hive.group}__hive-service</m:dependency.management__org.spark-project.hive__hive-beeline__exclusion_4>
+		<m:dependency.management__org.apache.calcite__calcite-core__version>1.2.0-incubating</m:dependency.management__org.apache.calcite__calcite-core__version>
+		<m:dependency.management__org.spark-project.hive__hive-beeline__exclusion_5>${hive.group}__hive-shims</m:dependency.management__org.spark-project.hive__hive-beeline__exclusion_5>
+		<m:dependency.management__org.spark-project.hive__hive-beeline__exclusion_2>org.apache.thrift__libthrift</m:dependency.management__org.spark-project.hive__hive-beeline__exclusion_2>
+		<m:dependency.management__org.eclipse.jetty__jetty-plus__scope>provided</m:dependency.management__org.eclipse.jetty__jetty-plus__scope>
+		<m:dependency.management__org.spark-project.hive__hive-beeline__exclusion_3>org.slf4j__slf4j-api</m:dependency.management__org.spark-project.hive__hive-beeline__exclusion_3>
+		<m:dependency.management__org.apache.zookeeper__zookeeper__scope>compile</m:dependency.management__org.apache.zookeeper__zookeeper__scope>
+		<m:dependency.management__io.dropwizard.metrics__metrics-ganglia__version>3.1.2</m:dependency.management__io.dropwizard.metrics__metrics-ganglia__version>
+		<m:properties__hadoop.version>2.2.0</m:properties__hadoop.version>
+		<m:dependency.management__io.netty__netty-all__version>4.0.29.Final</m:dependency.management__io.netty__netty-all__version>
+		<m:dependency.management__org.spark-project.hive__hive-beeline__exclusion_0>org.slf4j__slf4j-log4j12</m:dependency.management__org.spark-project.hive__hive-beeline__exclusion_0>
+		<m:dependency.management__org.spark-project.hive__hive-beeline__exclusion_1>log4j__log4j</m:dependency.management__org.spark-project.hive__hive-beeline__exclusion_1>
+		<m:dependency.management__org.codehaus.jackson__jackson-xc__version>1.9.13</m:dependency.management__org.codehaus.jackson__jackson-xc__version>
+		<m:dependency.management__org.apache.avro__avro-mapred__version>1.7.7</m:dependency.management__org.apache.avro__avro-mapred__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-client__scope>compile</m:dependency.management__org.apache.hadoop__hadoop-yarn-client__scope>
+		<m:dependency.management__junit__junit__scope>test</m:dependency.management__junit__junit__scope>
+		<m:dependency.management__org.apache.curator__curator-framework__version>2.4.0</m:dependency.management__org.apache.curator__curator-framework__version>
+		<m:dependency.management__org.eclipse.jetty__jetty-continuation__scope>provided</m:dependency.management__org.eclipse.jetty__jetty-continuation__scope>
+		<m:dependency.management__org.datanucleus__datanucleus-core__version>3.2.10</m:dependency.management__org.datanucleus__datanucleus-core__version>
+		<m:properties__parquet.version>1.7.0</m:properties__parquet.version>
+		<m:properties__selenium.version>2.52.0</m:properties__selenium.version>
+		<m:dependency.management__com.clearspring.analytics__stream__version>2.7.0</m:dependency.management__com.clearspring.analytics__stream__version>
+		<m:dependency.management__org.apache.parquet__parquet-column__version>1.7.0</m:dependency.management__org.apache.parquet__parquet-column__version>
+		<m:properties__paranamer.version>2.8</m:properties__paranamer.version>
+		<m:properties__commons.math3.version>3.4.1</m:properties__commons.math3.version>
+		<m:properties__jline.version>${scala.version}</m:properties__jline.version>
+		<m:dependency.management__com.twitter__parquet-hadoop-bundle__version>1.6.0</m:dependency.management__com.twitter__parquet-hadoop-bundle__version>
+		<m:dependency.management__org.apache.zookeeper__zookeeper__exclusion_0>org.jboss.netty__netty</m:dependency.management__org.apache.zookeeper__zookeeper__exclusion_0>
+		<m:dependency.management__org.scalanlp__breeze_2.11__version>0.11.2</m:dependency.management__org.scalanlp__breeze_2.11__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-server-web-proxy__version>2.2.0</m:dependency.management__org.apache.hadoop__hadoop-yarn-server-web-proxy__version>
+		<m:dependency.management__org.spark-project.hive__hive-cli__scope>compile</m:dependency.management__org.spark-project.hive__hive-cli__scope>
+		<m:dependency.management__com.ning__compress-lzf__version>1.0.3</m:dependency.management__com.ning__compress-lzf__version>
+		<m:dependency.management__com.novocode__junit-interface__scope>test</m:dependency.management__com.novocode__junit-interface__scope>
+		<m:dependency.management__org.eclipse.jetty__jetty-servlet__version>9.2.16.v20160414</m:dependency.management__org.eclipse.jetty__jetty-servlet__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-api__exclusion_4>javax.servlet__servlet-api</m:dependency.management__org.apache.hadoop__hadoop-yarn-api__exclusion_4>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-api__exclusion_5>asm__asm</m:dependency.management__org.apache.hadoop__hadoop-yarn-api__exclusion_5>
+		<m:dependency.management__org.eclipse.jetty__jetty-util__version>9.2.16.v20160414</m:dependency.management__org.eclipse.jetty__jetty-util__version>
+		<m:dependency.management__org.eclipse.jetty__jetty-util__scope>provided</m:dependency.management__org.eclipse.jetty__jetty-util__scope>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-api__exclusion_6>org.ow2.asm__asm</m:dependency.management__org.apache.hadoop__hadoop-yarn-api__exclusion_6>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-api__exclusion_7>org.jboss.netty__netty</m:dependency.management__org.apache.hadoop__hadoop-yarn-api__exclusion_7>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-api__exclusion_0>commons-logging__commons-logging</m:dependency.management__org.apache.hadoop__hadoop-yarn-api__exclusion_0>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-api__exclusion_1>com.sun.jersey__*</m:dependency.management__org.apache.hadoop__hadoop-yarn-api__exclusion_1>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-api__exclusion_2>com.sun.jersey.jersey-test-framework__*</m:dependency.management__org.apache.hadoop__hadoop-yarn-api__exclusion_2>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-api__exclusion_3>com.sun.jersey.contribs__*</m:dependency.management__org.apache.hadoop__hadoop-yarn-api__exclusion_3>
+		<m:dependency.management__org.apache.calcite__calcite-avatica__version>1.2.0-incubating</m:dependency.management__org.apache.calcite__calcite-avatica__version>
+		<m:dependency.management__org.hamcrest__hamcrest-library__version>1.3</m:dependency.management__org.hamcrest__hamcrest-library__version>
+		<m:dependency.management__org.spark-project.hive__hive-common__version>1.2.1.spark2</m:dependency.management__org.spark-project.hive__hive-common__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-common__scope>compile</m:dependency.management__org.apache.hadoop__hadoop-yarn-common__scope>
+		<m:properties__curator.version>2.4.0</m:properties__curator.version>
+		<m:dependency.management__org.apache.hadoop__hadoop-client__exclusion_11>asm__asm</m:dependency.management__org.apache.hadoop__hadoop-client__exclusion_11>
+		<m:dependency.management__org.apache.hadoop__hadoop-client__exclusion_10>org.codehaus.jackson__jackson-mapper-asl</m:dependency.management__org.apache.hadoop__hadoop-client__exclusion_10>
+		<m:properties__commons-io.version>2.4</m:properties__commons-io.version>
+		<m:dependency.management__org.apache.httpcomponents__httpclient__version>4.5.2</m:dependency.management__org.apache.httpcomponents__httpclient__version>
+		<m:properties__calcite.version>1.2.0-incubating</m:properties__calcite.version>
+		<m:dependency.management__mysql__mysql-connector-java__scope>test</m:dependency.management__mysql__mysql-connector-java__scope>
+		<m:dependency.management__org.eclipse.jetty__jetty-servlets__version>9.2.16.v20160414</m:dependency.management__org.eclipse.jetty__jetty-servlets__version>
+		<m:dependency.management__org.apache.commons__commons-lang3__version>3.3.2</m:dependency.management__org.apache.commons__commons-lang3__version>
+		<m:properties__test.java.home>${java.home}</m:properties__test.java.home>
+		<m:dependency.management__org.antlr__antlr4-runtime__version>4.5.3</m:dependency.management__org.antlr__antlr4-runtime__version>
+		<m:dependency.management__org.glassfish.jersey.core__jersey-client__version>2.22.2</m:dependency.management__org.glassfish.jersey.core__jersey-client__version>
+		<m:properties__scala.binary.version>2.11</m:properties__scala.binary.version>
+		<m:properties__slf4j.version>1.7.16</m:properties__slf4j.version>
+		<m:dependency.management__org.apache.calcite__calcite-core__exclusion_1>com.fasterxml.jackson.core__jackson-annotations</m:dependency.management__org.apache.calcite__calcite-core__exclusion_1>
+		<m:dependency.management__net.java.dev.jets3t__jets3t__exclusion_0>commons-logging__commons-logging</m:dependency.management__net.java.dev.jets3t__jets3t__exclusion_0>
+		<m:dependency.management__org.apache.calcite__calcite-core__exclusion_0>com.fasterxml.jackson.core__jackson-core</m:dependency.management__org.apache.calcite__calcite-core__exclusion_0>
+		<m:dependency.management__org.apache.calcite__calcite-core__exclusion_3>com.fasterxml.jackson.core__jackson-databind</m:dependency.management__org.apache.calcite__calcite-core__exclusion_3>
+		<m:dependency.management__org.spark-project.hive__hive-beeline__exclusion_10>commons-logging__commons-logging</m:dependency.management__org.spark-project.hive__hive-beeline__exclusion_10>
+		<m:dependency.management__org.apache.calcite__calcite-core__exclusion_2>com.google.guava__guava</m:dependency.management__org.apache.calcite__calcite-core__exclusion_2>
+		<m:dependency.management__org.scala-lang__scala-library__version>2.11.8</m:dependency.management__org.scala-lang__scala-library__version>
+		<m:dependency.management__net.sf.jpam__jpam__scope>compile</m:dependency.management__net.sf.jpam__jpam__scope>
+		<m:dependency.management__org.apache.calcite__calcite-core__exclusion_5>com.google.code.findbugs__jsr305</m:dependency.management__org.apache.calcite__calcite-core__exclusion_5>
+		<m:dependency.management__org.apache.calcite__calcite-core__exclusion_4>org.codehaus.janino__janino</m:dependency.management__org.apache.calcite__calcite-core__exclusion_4>
+		<m:dependency.management__org.apache.calcite__calcite-core__exclusion_7>org.hsqldb__hsqldb</m:dependency.management__org.apache.calcite__calcite-core__exclusion_7>
+		<m:dependency.management__org.hamcrest__hamcrest-library__scope>test</m:dependency.management__org.hamcrest__hamcrest-library__scope>
+		<m:dependency.management__org.apache.calcite__calcite-core__exclusion_6>org.pentaho__pentaho-aggdesigner-algorithm</m:dependency.management__org.apache.calcite__calcite-core__exclusion_6>
+		<m:dependency.management__org.eclipse.jetty__jetty-continuation__version>9.2.16.v20160414</m:dependency.management__org.eclipse.jetty__jetty-continuation__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-common__version>2.2.0</m:dependency.management__org.apache.hadoop__hadoop-yarn-common__version>
+		<m:properties__httpclient.classic.version>3.1</m:properties__httpclient.classic.version>
+		<m:properties__protobuf.version>2.5.0</m:properties__protobuf.version>
+		<m:dependency.management__org.codehaus.jackson__jackson-core-asl__version>1.9.13</m:dependency.management__org.codehaus.jackson__jackson-core-asl__version>
+		<m:properties__organization.logo>http://www.apache.org/images/asf_logo_wide.gif</m:properties__organization.logo>
+		<m:dependency.management__com.fasterxml.jackson.core__jackson-databind__version>2.6.5</m:dependency.management__com.fasterxml.jackson.core__jackson-databind__version>
+		<m:dependency.management__org.spark-project.hive__hive-exec__exclusion_15>com.esotericsoftware.kryo__kryo</m:dependency.management__org.spark-project.hive__hive-exec__exclusion_15>
+		<m:dependency.management__org.spark-project.hive__hive-exec__exclusion_14>org.apache.ant__ant</m:dependency.management__org.spark-project.hive__hive-exec__exclusion_14>
+		<m:dependency.management__org.spark-project.hive__hive-exec__exclusion_13>ant__ant</m:dependency.management__org.spark-project.hive__hive-exec__exclusion_13>
+		<m:dependency.management__org.spark-project.hive__hive-exec__exclusion_12>${hive.group}__spark-client</m:dependency.management__org.spark-project.hive__hive-exec__exclusion_12>
+		<m:dependency.management__org.spark-project.hive__hive-exec__exclusion_19>commons-codec__commons-codec</m:dependency.management__org.spark-project.hive__hive-exec__exclusion_19>
+		<m:dependency.management__org.spark-project.hive__hive-exec__exclusion_18>${hive.group}__hive-ant</m:dependency.management__org.spark-project.hive__hive-exec__exclusion_18>
+		<m:dependency.management__org.eclipse.jetty__jetty-http__version>9.2.16.v20160414</m:dependency.management__org.eclipse.jetty__jetty-http__version>
+		<m:dependency.management__org.spark-project.hive__hive-exec__exclusion_17>${hive.group}__hive-shims</m:dependency.management__org.spark-project.hive__hive-exec__exclusion_17>
+		<m:dependency.management__org.spark-project.hive__hive-exec__exclusion_16>${hive.group}__hive-metastore</m:dependency.management__org.spark-project.hive__hive-exec__exclusion_16>
+		<m:properties__maven-antrun.version>1.8</m:properties__maven-antrun.version>
+		<m:properties__jetty.version>9.2.16.v20160414</m:properties__jetty.version>
+		<m:dependency.management__org.spark-project.hive__hive-exec__exclusion_11>commons-logging__commons-logging</m:dependency.management__org.spark-project.hive__hive-exec__exclusion_11>
+		<m:dependency.management__net.java.dev.jets3t__jets3t__version>0.7.1</m:dependency.management__net.java.dev.jets3t__jets3t__version>
+		<m:dependency.management__org.spark-project.hive__hive-exec__exclusion_10>org.codehaus.groovy__groovy-all</m:dependency.management__org.spark-project.hive__hive-exec__exclusion_10>
+		<m:properties__commons-lang3.version>3.3.2</m:properties__commons-lang3.version>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-common__exclusion_2>asm__asm</m:dependency.management__org.apache.hadoop__hadoop-yarn-common__exclusion_2>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-common__exclusion_1>org.ow2.asm__asm</m:dependency.management__org.apache.hadoop__hadoop-yarn-common__exclusion_1>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-common__exclusion_0>org.jboss.netty__netty</m:dependency.management__org.apache.hadoop__hadoop-yarn-common__exclusion_0>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-common__exclusion_6>javax.servlet__servlet-api</m:dependency.management__org.apache.hadoop__hadoop-yarn-common__exclusion_6>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-common__exclusion_5>commons-logging__commons-logging</m:dependency.management__org.apache.hadoop__hadoop-yarn-common__exclusion_5>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-common__exclusion_4>com.sun.jersey__*</m:dependency.management__org.apache.hadoop__hadoop-yarn-common__exclusion_4>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-common__exclusion_3>com.sun.jersey.jersey-test-framework__*</m:dependency.management__org.apache.hadoop__hadoop-yarn-common__exclusion_3>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-common__exclusion_7>com.sun.jersey.contribs__*</m:dependency.management__org.apache.hadoop__hadoop-yarn-common__exclusion_7>
+		<m:dependency.management__org.apache.parquet__parquet-column__scope>compile</m:dependency.management__org.apache.parquet__parquet-column__scope>
+		<m:properties__mesos.classifier>shaded-protobuf</m:properties__mesos.classifier>
+		<m:dependency.management__org.scalatest__scalatest_2.11__version>2.2.6</m:dependency.management__org.scalatest__scalatest_2.11__version>
+		<m:dependency.management__org.hamcrest__hamcrest-core__version>1.3</m:dependency.management__org.hamcrest__hamcrest-core__version>
+		<m:dependency.management__org.apache.ivy__ivy__version>2.4.0</m:dependency.management__org.apache.ivy__ivy__version>
+		<m:dependency.management__org.jodd__jodd-core__version>3.5.2</m:dependency.management__org.jodd__jodd-core__version>
+		<m:dependency.management__org.spark-project.hive__hive-exec__exclusion_21>org.apache.avro__avro-mapred</m:dependency.management__org.spark-project.hive__hive-exec__exclusion_21>
+		<m:dependency.management__org.spark-project.hive__hive-exec__exclusion_20>commons-httpclient__commons-httpclient</m:dependency.management__org.spark-project.hive__hive-exec__exclusion_20>
+		<m:dependency.management__commons-codec__commons-codec__version>1.10</m:dependency.management__commons-codec__commons-codec__version>
+		<m:dependency.management__org.glassfish.jersey__jersey-client__version>2.22.2</m:dependency.management__org.glassfish.jersey__jersey-client__version>
+		<m:dependency.management__org.apache.curator__curator-client__version>2.4.0</m:dependency.management__org.apache.curator__curator-client__version>
+		<m:dependency.management__log4j__log4j__scope>compile</m:dependency.management__log4j__log4j__scope>
+		<m:dependency.management__commons-collections__commons-collections__version>3.2.2</m:dependency.management__commons-collections__commons-collections__version>
+		<m:properties__spark.shade.packageName>org.spark_project</m:properties__spark.shade.packageName>
+		<m:dependency.management__org.apache.commons__commons-math3__version>3.4.1</m:dependency.management__org.apache.commons__commons-math3__version>
+		<m:dependency.management__org.eclipse.jetty__jetty-servlets__scope>provided</m:dependency.management__org.eclipse.jetty__jetty-servlets__scope>
+		<m:dependency.management__org.apache.avro__avro-mapred__scope>compile</m:dependency.management__org.apache.avro__avro-mapred__scope>
+		<m:dependency.management__org.apache.xbean__xbean-asm5-shaded__version>4.4</m:dependency.management__org.apache.xbean__xbean-asm5-shaded__version>
+		<m:dependency.management__com.clearspring.analytics__stream__exclusion_0>it.unimi.dsi__fastutil</m:dependency.management__com.clearspring.analytics__stream__exclusion_0>
+		<m:dependency.management__org.apache.hadoop__hadoop-client__version>2.2.0</m:dependency.management__org.apache.hadoop__hadoop-client__version>
+		<m:properties__distMgmtSnapshotsUrl>https://repository.apache.org/content/repositories/snapshots</m:properties__distMgmtSnapshotsUrl>
+		<m:properties__useZincForJdk8>true</m:properties__useZincForJdk8>
+		<m:properties__scala.version>2.11.8</m:properties__scala.version>
+		<m:properties__datanucleus-core.version>3.2.10</m:properties__datanucleus-core.version>
+		<m:properties__hive.version.short>1.2.1</m:properties__hive.version.short>
+		<m:dependency.management__org.spark-project.hive__hive-metastore__version>1.2.1.spark2</m:dependency.management__org.spark-project.hive__hive-metastore__version>
+		<m:properties__codahale.metrics.version>3.1.2</m:properties__codahale.metrics.version>
+		<m:properties__aws.kinesis.producer.version>0.10.2</m:properties__aws.kinesis.producer.version>
+		<m:dependency.management__org.apache.curator__curator-test__scope>test</m:dependency.management__org.apache.curator__curator-test__scope>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-server-tests__version>2.2.0</m:dependency.management__org.apache.hadoop__hadoop-yarn-server-tests__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-server-tests__exclusion_7>org.jboss.netty__netty</m:dependency.management__org.apache.hadoop__hadoop-yarn-server-tests__exclusion_7>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-server-web-proxy__exclusion_5>org.jboss.netty__netty</m:dependency.management__org.apache.hadoop__hadoop-yarn-server-web-proxy__exclusion_5>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-server-web-proxy__exclusion_6>asm__asm</m:dependency.management__org.apache.hadoop__hadoop-yarn-server-web-proxy__exclusion_6>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-server-web-proxy__exclusion_3>commons-logging__commons-logging</m:dependency.management__org.apache.hadoop__hadoop-yarn-server-web-proxy__exclusion_3>
+		<m:properties__hive.parquet.version>1.6.0</m:properties__hive.parquet.version>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-server-web-proxy__exclusion_4>org.ow2.asm__asm</m:dependency.management__org.apache.hadoop__hadoop-yarn-server-web-proxy__exclusion_4>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-server-tests__exclusion_3>com.sun.jersey__*</m:dependency.management__org.apache.hadoop__hadoop-yarn-server-tests__exclusion_3>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-server-web-proxy__exclusion_1>com.sun.jersey.jersey-test-framework__*</m:dependency.management__org.apache.hadoop__hadoop-yarn-server-web-proxy__exclusion_1>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-server-tests__exclusion_4>com.sun.jersey.jersey-test-framework__*</m:dependency.management__org.apache.hadoop__hadoop-yarn-server-tests__exclusion_4>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-server-web-proxy__exclusion_2>javax.servlet__servlet-api</m:dependency.management__org.apache.hadoop__hadoop-yarn-server-web-proxy__exclusion_2>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-server-tests__exclusion_5>asm__asm</m:dependency.management__org.apache.hadoop__hadoop-yarn-server-tests__exclusion_5>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-server-tests__exclusion_6>org.ow2.asm__asm</m:dependency.management__org.apache.hadoop__hadoop-yarn-server-tests__exclusion_6>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-server-web-proxy__exclusion_0>com.sun.jersey__*</m:dependency.management__org.apache.hadoop__hadoop-yarn-server-web-proxy__exclusion_0>
+		<m:dependency.management__org.spark-project.hive__hive-beeline__version>1.2.1.spark2</m:dependency.management__org.spark-project.hive__hive-beeline__version>
+		<e:sbtTransformHash>b8900c83172123dcd7966185fd84fafd35c57abd</e:sbtTransformHash>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-server-tests__exclusion_0>com.sun.jersey.contribs__*</m:dependency.management__org.apache.hadoop__hadoop-yarn-server-tests__exclusion_0>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-server-tests__exclusion_1>javax.servlet__servlet-api</m:dependency.management__org.apache.hadoop__hadoop-yarn-server-tests__exclusion_1>
+		<m:properties__commons.httpcore.version>4.4.4</m:properties__commons.httpcore.version>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-server-tests__exclusion_2>commons-logging__commons-logging</m:dependency.management__org.apache.hadoop__hadoop-yarn-server-tests__exclusion_2>
+		<m:properties__flume.version>1.6.0</m:properties__flume.version>
+		<m:dependency.management__org.spark-project.hive__hive-shims__version>1.2.1.spark2</m:dependency.management__org.spark-project.hive__hive-shims__version>
+		<m:maven.plugins>org.apache.maven.plugins__maven-remote-resources-plugin__null|org.apache.maven.plugins__maven-remote-resources-plugin__null|org.apache.maven.plugins__maven-dependency-plugin__2.10|org.apache.maven.plugins__maven-shade-plugin__null|org.apache.maven.plugins__maven-enforcer-plugin__null|net.alchim31.maven__scala-maven-plugin__null|org.apache.maven.plugins__maven-source-plugin__null|org.scalastyle__scalastyle-maven-plugin__0.8.0|org.apache.maven.plugins__maven-checkstyle-plugin__2.17|org.apache.maven.plugins__maven-antrun-plugin__null|org.apache.maven.plugins__maven-surefire-plugin__null|org.scalatest__scalatest-maven-plugin__null|org.apache.maven.plugins__maven-jar-plugin__null|org.apache.maven.plugins__maven-remote-resources-plugin__null|org.apache.maven.plugins__maven-remote-resources-plugin__null|org.apache.maven.plugins__maven-dependency-plugin__2.10|org.apache.maven.plugins__maven-shade-plugin__null|org.apache.maven.plugins__maven-enforcer-plugin__null|net.alchim31.maven__scala-maven-plugin__null|org.apache.maven.plugins__maven-source-plugin__null|org.scalastyle__scalastyle-maven-plugin__0.8.0|org.apache.maven.plugins__maven-checkstyle-plugin__2.17|org.apache.maven.plugins__maven-antrun-plugin__null|org.apache.maven.plugins__maven-surefire-plugin__null|org.scalatest__scalatest-maven-plugin__null|org.apache.maven.plugins__maven-jar-plugin__null|null__maven-shade-plugin__null</m:maven.plugins>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-server-web-proxy__exclusion_7>com.sun.jersey.contribs__*</m:dependency.management__org.apache.hadoop__hadoop-yarn-server-web-proxy__exclusion_7>
+		<m:dependency.management__org.apache.mesos__mesos__exclusion_0>com.google.protobuf__protobuf-java</m:dependency.management__org.apache.mesos__mesos__exclusion_0>
+		<m:dependency.management__com.google.protobuf__protobuf-java__version>2.5.0</m:dependency.management__com.google.protobuf__protobuf-java__version>
+		<m:dependency.management__commons-lang__commons-lang__version>2.6</m:dependency.management__commons-lang__commons-lang__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-server-web-proxy__scope>compile</m:dependency.management__org.apache.hadoop__hadoop-yarn-server-web-proxy__scope>
+		<m:properties__jars.target.dir>${project.build.directory}/scala-${scala.binary.version}/jars</m:properties__jars.target.dir>
+		<m:dependency.management__io.dropwizard.metrics__metrics-jvm__version>3.1.2</m:dependency.management__io.dropwizard.metrics__metrics-jvm__version>
+		<m:dependency.management__com.fasterxml.jackson.module__jackson-module-scala_2.11__version>2.6.5</m:dependency.management__com.fasterxml.jackson.module__jackson-module-scala_2.11__version>
+		<m:dependency.management__com.spotify__docker-client__exclusion_0>com.google.guava__guava</m:dependency.management__com.spotify__docker-client__exclusion_0>
+		<m:properties__distMgmtSnapshotsName>Apache Development Snapshot Repository</m:properties__distMgmtSnapshotsName>
+		<m:properties__parquet.test.deps.scope>test</m:properties__parquet.test.deps.scope>
+		<m:properties__sourceReleaseAssemblyDescriptor>source-release</m:properties__sourceReleaseAssemblyDescriptor>
+		<m:dependency.management__com.spotify__docker-client__exclusion_1>commons-logging__commons-logging</m:dependency.management__com.spotify__docker-client__exclusion_1>
+		<m:dependency.management__org.apache.parquet__parquet-hadoop__scope>compile</m:dependency.management__org.apache.parquet__parquet-hadoop__scope>
+		<m:dependency.management__net.sf.jpam__jpam__version>1.1</m:dependency.management__net.sf.jpam__jpam__version>
+		<m:dependency.management__org.eclipse.jetty__jetty-server__scope>provided</m:dependency.management__org.eclipse.jetty__jetty-server__scope>
+		<m:dependency.management__org.apache.curator__curator-test__version>2.4.0</m:dependency.management__org.apache.curator__curator-test__version>
+		<m:dependency.management__org.apache.avro__avro-ipc__version>1.7.7</m:dependency.management__org.apache.avro__avro-ipc__version>
+		<m:dependency.management__org.apache.spark__spark-tags_2.11__version>2.0.0</m:dependency.management__org.apache.spark__spark-tags_2.11__version>
+		<m:dependency.management__org.postgresql__postgresql__scope>test</m:dependency.management__org.postgresql__postgresql__scope>
+		<m:dependency.management__org.glassfish.jersey.containers__jersey-container-servlet__version>2.22.2</m:dependency.management__org.glassfish.jersey.containers__jersey-container-servlet__version>
+		<m:dependency.management__org.apache.parquet__parquet-avro__scope>test</m:dependency.management__org.apache.parquet__parquet-avro__scope>
+		<m:dependency.management__org.spark-project.hive__hive-exec__version>1.2.1.spark2</m:dependency.management__org.spark-project.hive__hive-exec__version>
+		<m:dependency.management__io.netty__netty__version>3.8.0.Final</m:dependency.management__io.netty__netty__version>
+		<m:properties__commons-lang2.version>2.6</m:properties__commons-lang2.version>
+		<m:dependency.management__org.spark-project.hive__hive-cli__exclusion_11>${hive.group}__hive-jdbc</m:dependency.management__org.spark-project.hive__hive-cli__exclusion_11>
+		<m:dependency.management__org.spark-project.hive__hive-cli__exclusion_10>${hive.group}__hive-metastore</m:dependency.management__org.spark-project.hive__hive-cli__exclusion_10>
+		<m:dependency.management__org.glassfish.jersey.core__jersey-server__version>2.22.2</m:dependency.management__org.glassfish.jersey.core__jersey-server__version>
+		<m:dependency.management__io.dropwizard.metrics__metrics-json__version>3.1.2</m:dependency.management__io.dropwizard.metrics__metrics-json__version>
+		<m:dependency.management__org.spark-project.hive__hive-serde__exclusion_7>org.apache.avro__avro</m:dependency.management__org.spark-project.hive__hive-serde__exclusion_7>
+		<m:dependency.management__org.spark-project.hive__hive-serde__exclusion_8>${hive.group}__hive-shims</m:dependency.management__org.spark-project.hive__hive-serde__exclusion_8>
+		<m:dependency.management__org.spark-project.hive__hive-serde__exclusion_5>${hive.group}__hive-common</m:dependency.management__org.spark-project.hive__hive-serde__exclusion_5>
+		<m:dependency.management__org.spark-project.hive__hive-serde__exclusion_6>com.google.code.findbugs__jsr305</m:dependency.management__org.spark-project.hive__hive-serde__exclusion_6>
+		<m:dependency.management__org.codehaus.janino__janino__version>2.7.8</m:dependency.management__org.codehaus.janino__janino__version>
+		<m:properties__javaxservlet.version>3.1.0</m:properties__javaxservlet.version>
+		<m:dependency.management__org.spark-project.hive__hive-serde__exclusion_9>commons-codec__commons-codec</m:dependency.management__org.spark-project.hive__hive-serde__exclusion_9>
+		<m:dependency.management__org.spark-project.hive__hive-serde__exclusion_0>org.slf4j__slf4j-api</m:dependency.management__org.spark-project.hive__hive-serde__exclusion_0>
+		<m:dependency.management__commons-net__commons-net__version>2.2</m:dependency.management__commons-net__commons-net__version>
+		<m:dependency.management__org.spark-project.hive__hive-serde__exclusion_3>org.apache.thrift__libfb303</m:dependency.management__org.spark-project.hive__hive-serde__exclusion_3>
+		<m:dependency.management__org.spark-project.hive__hive-serde__exclusion_4>log4j__log4j</m:dependency.management__org.spark-project.hive__hive-serde__exclusion_4>
+		<m:dependency.management__org.apache.thrift__libthrift__exclusion_0>org.slf4j__slf4j-api</m:dependency.management__org.apache.thrift__libthrift__exclusion_0>
+		<m:dependency.management__org.spark-project.hive__hive-serde__exclusion_1>org.slf4j__slf4j-log4j12</m:dependency.management__org.spark-project.hive__hive-serde__exclusion_1>
+		<m:dependency.management__org.apache.curator__curator-recipes__scope>compile</m:dependency.management__org.apache.curator__curator-recipes__scope>
+		<m:dependency.management__org.spark-project.hive__hive-serde__exclusion_2>org.apache.thrift__libthrift</m:dependency.management__org.spark-project.hive__hive-serde__exclusion_2>
+		<m:dependency.management__org.eclipse.jetty__jetty-security__scope>provided</m:dependency.management__org.eclipse.jetty__jetty-security__scope>
+		<m:dependency.management__org.seleniumhq.selenium__selenium-java__version>2.52.0</m:dependency.management__org.seleniumhq.selenium__selenium-java__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-api__version>2.2.0</m:dependency.management__org.apache.hadoop__hadoop-yarn-api__version>
+		<m:dependency.management__org.seleniumhq.selenium__selenium-htmlunit-driver__version>2.52.0</m:dependency.management__org.seleniumhq.selenium__selenium-htmlunit-driver__version>
+		<m:dependency.management__org.spark-project.hive__hive-cli__version>1.2.1.spark2</m:dependency.management__org.spark-project.hive__hive-cli__version>
+		<m:dependency.management__org.spark-project.hive__hive-serde__scope>compile</m:dependency.management__org.spark-project.hive__hive-serde__scope>
+		<m:dependency.management__xml-apis__xml-apis__scope>test</m:dependency.management__xml-apis__xml-apis__scope>
+		<m:properties__project.build.sourceEncoding>UTF-8</m:properties__project.build.sourceEncoding>
+		<m:dependency.management__org.apache.flume__flume-ng-core__exclusion_0>io.netty__netty</m:dependency.management__org.apache.flume__flume-ng-core__exclusion_0>
+		<m:dependency.management__org.apache.flume__flume-ng-core__exclusion_1>org.apache.flume__flume-ng-auth</m:dependency.management__org.apache.flume__flume-ng-core__exclusion_1>
+		<m:dependency.management__org.apache.flume__flume-ng-core__exclusion_2>org.apache.thrift__libthrift</m:dependency.management__org.apache.flume__flume-ng-core__exclusion_2>
+		<m:dependency.management__org.apache.flume__flume-ng-core__exclusion_3>org.mortbay.jetty__servlet-api</m:dependency.management__org.apache.flume__flume-ng-core__exclusion_3>
+		<m:dependency.management__org.codehaus.jackson__jackson-mapper-asl__scope>compile</m:dependency.management__org.codehaus.jackson__jackson-mapper-asl__scope>
+		<m:properties__commons.collections.version>3.2.2</m:properties__commons.collections.version>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-api__scope>compile</m:dependency.management__org.apache.hadoop__hadoop-yarn-api__scope>
+		<m:dependency.management__org.apache.flume__flume-ng-sdk__scope>compile</m:dependency.management__org.apache.flume__flume-ng-sdk__scope>
+		<m:dependency.management__org.spark-project.hive__hive-common__exclusion_0>${hive.group}__hive-shims</m:dependency.management__org.spark-project.hive__hive-common__exclusion_0>
+		<m:dependency.management__org.apache.derby__derby__version>10.11.1.1</m:dependency.management__org.apache.derby__derby__version>
+		<m:dependency.management__org.spark-project.hive__hive-beeline__scope>compile</m:dependency.management__org.spark-project.hive__hive-beeline__scope>
+		<m:dependency.management__org.slf4j__slf4j-log4j12__scope>compile</m:dependency.management__org.slf4j__slf4j-log4j12__scope>
+		<m:dependency.management__org.spark-project.hive__hive-common__exclusion_5>org.slf4j__slf4j-api</m:dependency.management__org.spark-project.hive__hive-common__exclusion_5>
+		<m:dependency.management__org.apache.flume__flume-ng-core__version>1.6.0</m:dependency.management__org.apache.flume__flume-ng-core__version>
+		<m:dependency.management__org.spark-project.hive__hive-common__exclusion_6>org.slf4j__slf4j-log4j12</m:dependency.management__org.spark-project.hive__hive-common__exclusion_6>
+		<m:dependency.management__org.seleniumhq.selenium__selenium-java__exclusion_0>com.google.guava__guava</m:dependency.management__org.seleniumhq.selenium__selenium-java__exclusion_0>
+		<m:dependency.management__org.spark-project.hive__hive-common__exclusion_1>log4j__log4j</m:dependency.management__org.spark-project.hive__hive-common__exclusion_1>
+		<m:dependency.management__org.apache.flume__flume-ng-sdk__exclusion_0>io.netty__netty</m:dependency.management__org.apache.flume__flume-ng-sdk__exclusion_0>
+		<m:dependency.management__org.seleniumhq.selenium__selenium-java__exclusion_1>io.netty__netty</m:dependency.management__org.seleniumhq.selenium__selenium-java__exclusion_1>
+		<m:dependency.management__org.spark-project.hive__hive-common__exclusion_2>commons-logging__commons-logging</m:dependency.management__org.spark-project.hive__hive-common__exclusion_2>
+		<m:dependency.management__org.spark-project.hive__hive-common__exclusion_3>org.apache.ant__ant</m:dependency.management__org.spark-project.hive__hive-common__exclusion_3>
+		<m:dependency.management__org.spark-project.hive__hive-common__exclusion_4>org.apache.zookeeper__zookeeper</m:dependency.management__org.spark-project.hive__hive-common__exclusion_4>
+		<m:dependency.management__org.apache.flume__flume-ng-sdk__exclusion_1>org.apache.thrift__libthrift</m:dependency.management__org.apache.flume__flume-ng-sdk__exclusion_1>
+		<m:dependency.management__org.apache.httpcomponents__httpmime__version>4.5.2</m:dependency.management__org.apache.httpcomponents__httpmime__version>
+		<m:dependency.management__org.spark-project.hive__hive-cli__exclusion_5>${hive.group}__hive-shims</m:dependency.management__org.spark-project.hive__hive-cli__exclusion_5>
+		<m:dependency.management__com.google.guava__guava__scope>provided</m:dependency.management__com.google.guava__guava__scope>
+		<m:dependency.management__org.spark-project.hive__hive-cli__exclusion_4>org.apache.thrift__libthrift</m:dependency.management__org.spark-project.hive__hive-cli__exclusion_4>
+		<m:dependency.management__org.seleniumhq.selenium__selenium-htmlunit-driver__scope>test</m:dependency.management__org.seleniumhq.selenium__selenium-htmlunit-driver__scope>
+		<m:dependency.management__org.spark-project.hive__hive-cli__exclusion_7>org.slf4j__slf4j-api</m:dependency.management__org.spark-project.hive__hive-cli__exclusion_7>
+		<m:dependency.management__org.spark-project.hive__hive-cli__exclusion_6>org.slf4j__slf4j-log4j12</m:dependency.management__org.spark-project.hive__hive-cli__exclusion_6>
+		<m:dependency.management__org.spark-project.hive__hive-cli__exclusion_9>${hive.group}__hive-common</m:dependency.management__org.spark-project.hive__hive-cli__exclusion_9>
+		<m:dependency.management__org.spark-project.hive__hive-cli__exclusion_8>${hive.group}__hive-exec</m:dependency.management__org.spark-project.hive__hive-cli__exclusion_8>
+		<m:dependency.management__org.eclipse.jetty__jetty-http__scope>provided</m:dependency.management__org.eclipse.jetty__jetty-http__scope>
+		<m:dependency.management__org.scala-lang__scalap__version>2.11.8</m:dependency.management__org.scala-lang__scalap__version>
+		<m:dependency.management__org.hamcrest__hamcrest-core__scope>test</m:dependency.management__org.hamcrest__hamcrest-core__scope>
+		<m:dependency.management__org.spark-project.hive__hive-cli__exclusion_1>log4j__log4j</m:dependency.management__org.spark-project.hive__hive-cli__exclusion_1>
+		<m:dependency.management__org.spark-project.hive__hive-cli__exclusion_0>commons-logging__commons-logging</m:dependency.management__org.spark-project.hive__hive-cli__exclusion_0>
+		<m:dependency.management__org.apache.avro__avro-ipc__exclusion_0>io.netty__netty</m:dependency.management__org.apache.avro__avro-ipc__exclusion_0>
+		<m:dependency.management__org.spark-project.hive__hive-cli__exclusion_3>${hive.group}__hive-serde</m:dependency.management__org.spark-project.hive__hive-cli__exclusion_3>
+		<m:dependency.management__org.spark-project.hive__hive-cli__exclusion_2>${hive.group}__hive-service</m:dependency.management__org.spark-project.hive__hive-cli__exclusion_2>
+		<m:dependency.management__org.apache.avro__avro-ipc__exclusion_2>org.mortbay.jetty__jetty</m:dependency.management__org.apache.avro__avro-ipc__exclusion_2>
+		<m:dependency.management__org.apache.avro__avro-ipc__exclusion_1>org.mortbay.jetty__jetty-util</m:dependency.management__org.apache.avro__avro-ipc__exclusion_1>
+		<m:dependency.management__org.apache.avro__avro-ipc__exclusion_4>org.mortbay.jetty__servlet-api</m:dependency.management__org.apache.avro__avro-ipc__exclusion_4>
+		<m:dependency.management__org.apache.avro__avro-ipc__exclusion_3>org.apache.velocity__velocity</m:dependency.management__org.apache.avro__avro-ipc__exclusion_3>
+		<m:properties__hadoop.deps.scope>compile</m:properties__hadoop.deps.scope>
+		<m:properties__mesos.version>0.21.1</m:properties__mesos.version>
+		<m:properties__codehaus.jackson.version>1.9.13</m:properties__codehaus.jackson.version>
+		<m:dependency.management__io.dropwizard.metrics__metrics-graphite__version>3.1.2</m:dependency.management__io.dropwizard.metrics__metrics-graphite__version>
+		<m:properties__netlib.java.version>1.1.2</m:properties__netlib.java.version>
+		<m:properties__zookeeper.version>3.4.5</m:properties__zookeeper.version>
+		<m:dependency.management__org.apache.curator__curator-recipes__exclusion_0>org.jboss.netty__netty</m:dependency.management__org.apache.curator__curator-recipes__exclusion_0>
+		<m:dependency.management__org.apache.curator__curator-recipes__exclusion_1>jline__jline</m:dependency.management__org.apache.curator__curator-recipes__exclusion_1>
+		<m:properties__hive.group>org.spark-project.hive</m:properties__hive.group>
+		<m:dependency.management__net.java.dev.jets3t__jets3t__scope>compile</m:dependency.management__net.java.dev.jets3t__jets3t__scope>
+		<m:dependency.management__org.scalanlp__breeze_2.11__exclusion_0>junit__junit</m:dependency.management__org.scalanlp__breeze_2.11__exclusion_0>
+		<m:dependency.management__org.apache.thrift__libfb303__exclusion_0>org.slf4j__slf4j-api</m:dependency.management__org.apache.thrift__libfb303__exclusion_0>
+		<m:dependency.management__org.scalanlp__breeze_2.11__exclusion_1>org.apache.commons__commons-math3</m:dependency.management__org.scalanlp__breeze_2.11__exclusion_1>
+		<m:dependency.management__org.spark-project.hive__hive-serde__version>1.2.1.spark2</m:dependency.management__org.spark-project.hive__hive-serde__version>
+		<m:dependency.management__mysql__mysql-connector-java__version>5.1.38</m:dependency.management__mysql__mysql-connector-java__version>
+		<m:dependency.management__org.glassfish.jersey.core__jersey-common__version>2.22.2</m:dependency.management__org.glassfish.jersey.core__jersey-common__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-server-tests__scope>test</m:dependency.management__org.apache.hadoop__hadoop-yarn-server-tests__scope>
+		<m:dependency.management__com.google.guava__guava__version>14.0.1</m:dependency.management__com.google.guava__guava__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-client__exclusion_7>asm__asm</m:dependency.management__org.apache.hadoop__hadoop-yarn-client__exclusion_7>
+		<m:dependency.management__org.scala-lang__scala-actors__version>2.11.8</m:dependency.management__org.scala-lang__scala-actors__version>
+		<m:dependency.management__org.apache.hadoop__hadoop-client__exclusion_9>org.ow2.asm__asm</m:dependency.management__org.apache.hadoop__hadoop-client__exclusion_9>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-client__exclusion_5>org.ow2.asm__asm</m:dependency.management__org.apache.hadoop__hadoop-yarn-client__exclusion_5>
+		<m:properties__avro.version>1.7.7</m:properties__avro.version>
+		<m:dependency.management__org.apache.hadoop__hadoop-client__exclusion_8>org.jboss.netty__netty</m:dependency.management__org.apache.hadoop__hadoop-client__exclusion_8>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-client__exclusion_6>org.jboss.netty__netty</m:dependency.management__org.apache.hadoop__hadoop-yarn-client__exclusion_6>
+		<m:dependency.management__org.apache.hadoop__hadoop-client__exclusion_7>commons-logging__commons-logging</m:dependency.management__org.apache.hadoop__hadoop-client__exclusion_7>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-client__exclusion_3>javax.servlet__servlet-api</m:dependency.management__org.apache.hadoop__hadoop-yarn-client__exclusion_3>
+		<m:dependency.management__org.apache.hadoop__hadoop-client__exclusion_6>org.mockito__mockito-all</m:dependency.management__org.apache.hadoop__hadoop-client__exclusion_6>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-client__exclusion_4>commons-logging__commons-logging</m:dependency.management__org.apache.hadoop__hadoop-yarn-client__exclusion_4>
+		<m:dependency.management__org.apache.hadoop__hadoop-client__exclusion_5>org.mortbay.jetty__servlet-api-2.5</m:dependency.management__org.apache.hadoop__hadoop-client__exclusion_5>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-client__exclusion_1>com.sun.jersey__*</m:dependency.management__org.apache.hadoop__hadoop-yarn-client__exclusion_1>
+		<m:dependency.management__org.apache.hadoop__hadoop-client__exclusion_4>javax.servlet__servlet-api</m:dependency.management__org.apache.hadoop__hadoop-client__exclusion_4>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-client__exclusion_2>com.sun.jersey.jersey-test-framework__*</m:dependency.management__org.apache.hadoop__hadoop-yarn-client__exclusion_2>
+		<m:dependency.management__org.xerial.snappy__snappy-java__scope>compile</m:dependency.management__org.xerial.snappy__snappy-java__scope>
+		<m:dependency.management__org.apache.hadoop__hadoop-client__exclusion_3>junit__junit</m:dependency.management__org.apache.hadoop__hadoop-client__exclusion_3>
+		<m:dependency.management__org.spark-project.hive__hive-metastore__scope>compile</m:dependency.management__org.spark-project.hive__hive-metastore__scope>
+		<m:dependency.management__org.apache.hadoop__hadoop-client__exclusion_2>com.sun.jersey__*</m:dependency.management__org.apache.hadoop__hadoop-client__exclusion_2>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-client__exclusion_0>com.sun.jersey.contribs__*</m:dependency.management__org.apache.hadoop__hadoop-yarn-client__exclusion_0>
+		<m:dependency.management__org.apache.hadoop__hadoop-client__exclusion_1>com.sun.jersey.jersey-test-framework__*</m:dependency.management__org.apache.hadoop__hadoop-client__exclusion_1>
+		<m:dependency.management__org.apache.hadoop__hadoop-client__exclusion_0>com.sun.jersey.contribs__*</m:dependency.management__org.apache.hadoop__hadoop-client__exclusion_0>
+		<m:properties__hive.version>1.2.1.spark2</m:properties__hive.version>
+		<m:dependency.management__org.spark-project.hive__hive-jdbc__version>1.2.1.spark2</m:dependency.management__org.spark-project.hive__hive-jdbc__version>
+		<m:dependency.management__org.eclipse.jetty__jetty-servlet__scope>provided</m:dependency.management__org.eclipse.jetty__jetty-servlet__scope>
+		<m:dependency.management__net.jpountz.lz4__lz4__version>1.3.0</m:dependency.management__net.jpountz.lz4__lz4__version>
+		<m:dependency.management__com.spotify__docker-client__version>3.6.6</m:dependency.management__com.spotify__docker-client__version>
+		<m:dependency.management__org.apache.thrift__libthrift__version>0.9.2</m:dependency.management__org.apache.thrift__libthrift__version>
+		<m:properties__jodd.version>3.5.2</m:properties__jodd.version>
+		<m:dependency.management__org.scalatest__scalatest_2.11__scope>test</m:dependency.management__org.scalatest__scalatest_2.11__scope>
+		<m:properties__MaxPermGen>512m</m:properties__MaxPermGen>
+		<m:dependency.management__org.eclipse.jetty__jetty-plus__version>9.2.16.v20160414</m:dependency.management__org.eclipse.jetty__jetty-plus__version>
+		<m:dependency.management__org.slf4j__slf4j-api__version>1.7.16</m:dependency.management__org.slf4j__slf4j-api__version>
+		<m:dependency.management__org.slf4j__slf4j-log4j12__version>1.7.16</m:dependency.management__org.slf4j__slf4j-log4j12__version>
+		<m:dependency.management__com.spotify__docker-client__scope>test</m:dependency.management__com.spotify__docker-client__scope>
+		<m:dependency.management__org.spark-project.hive__hive-exec__scope>compile</m:dependency.management__org.spark-project.hive__hive-exec__scope>
+		<m:dependency.management__org.roaringbitmap__RoaringBitmap__version>0.5.11</m:dependency.management__org.roaringbitmap__RoaringBitmap__version>
+		<m:dependency.management__org.apache.avro__avro__version>1.7.7</m:dependency.management__org.apache.avro__avro__version>
+		<m:dependency.management__net.sf.jpam__jpam__exclusion_0>javax.servlet__servlet-api</m:dependency.management__net.sf.jpam__jpam__exclusion_0>
+		<m:properties__fasterxml.jackson.version>2.6.5</m:properties__fasterxml.jackson.version>
+		<m:properties__CodeCacheSize>512m</m:properties__CodeCacheSize>
+		<m:dependency.management__com.fasterxml.jackson.core__jackson-annotations__version>2.6.5</m:dependency.management__com.fasterxml.jackson.core__jackson-annotations__version>
+		<m:properties__flume.deps.scope>compile</m:properties__flume.deps.scope>
+		<m:dependency.management__org.mockito__mockito-core__scope>test</m:dependency.management__org.mockito__mockito-core__scope>
+		<m:dependency.management__org.apache.hadoop__hadoop-client__scope>compile</m:dependency.management__org.apache.hadoop__hadoop-client__scope>
+		<m:dependency.management__commons-httpclient__commons-httpclient__version>3.1</m:dependency.management__commons-httpclient__commons-httpclient__version>
+		<m:dependency.management__org.apache.httpcomponents__httpcore__version>4.4.4</m:dependency.management__org.apache.httpcomponents__httpcore__version>
+		<m:dependency.management__org.xerial.snappy__snappy-java__version>1.1.2.4</m:dependency.management__org.xerial.snappy__snappy-java__version>
+		<m:properties__joda.version>2.9.3</m:properties__joda.version>
+		<m:properties__libthrift.version>0.9.2</m:properties__libthrift.version>
+		<m:properties__ivy.version>2.4.0</m:properties__ivy.version>
+		<m:dependency.management__org.eclipse.jetty__jetty-security__version>9.2.16.v20160414</m:dependency.management__org.eclipse.jetty__jetty-security__version>
+		<m:dependency.management__org.apache.flume__flume-ng-core__scope>compile</m:dependency.management__org.apache.flume__flume-ng-core__scope>
+		<m:properties__log4j.version>1.2.17</m:properties__log4j.version>
+		<m:properties__chill.version>0.8.0</m:properties__chill.version>
+		<m:dependency.management__com.google.protobuf__protobuf-java__scope>compile</m:dependency.management__com.google.protobuf__protobuf-java__scope>
+		<m:dependency.management__org.apache.thrift__libfb303__version>0.9.2</m:dependency.management__org.apache.thrift__libfb303__version>
+		<m:dependency.management__com.google.code.findbugs__jsr305__version>1.3.9</m:dependency.management__com.google.code.findbugs__jsr305__version>
+		<m:dependency.management__com.fasterxml.jackson.module__jackson-module-jaxb-annotations__version>2.6.5</m:dependency.management__com.fasterxml.jackson.module__jackson-module-jaxb-annotations__version>
+		<m:dependency.management__org.scalacheck__scalacheck_2.11__scope>test</m:dependency.management__org.scalacheck__scalacheck_2.11__scope>
+		<m:dependency.management__org.apache.curator__curator-recipes__version>2.4.0</m:dependency.management__org.apache.curator__curator-recipes__version>
+		<m:dependency.management__io.dropwizard.metrics__metrics-core__version>3.1.2</m:dependency.management__io.dropwizard.metrics__metrics-core__version>
+		<m:dependency.management__org.codehaus.jackson__jackson-core-asl__scope>compile</m:dependency.management__org.codehaus.jackson__jackson-core-asl__scope>
+		<m:dependency.management__org.apache.mesos__mesos__version>0.21.1</m:dependency.management__org.apache.mesos__mesos__version>
+		<m:dependency.management__org.slf4j__jcl-over-slf4j__version>1.7.16</m:dependency.management__org.slf4j__jcl-over-slf4j__version>
+		<m:properties__project.reporting.outputEncoding>UTF-8</m:properties__project.reporting.outputEncoding>
+		<m:properties__gpg.useagent>true</m:properties__gpg.useagent>
+		<m:dependency.management__org.mockito__mockito-core__version>1.10.19</m:dependency.management__org.mockito__mockito-core__version>
+		<m:dependency.management__com.novocode__junit-interface__version>0.11</m:dependency.management__com.novocode__junit-interface__version>
+		<m:dependency.management__org.slf4j__slf4j-api__scope>compile</m:dependency.management__org.slf4j__slf4j-api__scope>
+		<m:dependency.management__org.eclipse.jetty__jetty-server__version>9.2.16.v20160414</m:dependency.management__org.eclipse.jetty__jetty-server__version>
+		<m:properties__sbt.project.name>streaming</m:properties__sbt.project.name>
+		<m:properties__jsr305.version>1.3.9</m:properties__jsr305.version>
+		<m:dependency.management__org.apache.zookeeper__zookeeper__version>3.4.5</m:dependency.management__org.apache.zookeeper__zookeeper__version>
+		<m:dependency.management__junit__junit__version>4.12</m:dependency.management__junit__junit__version>
+		<m:dependency.management__org.spark-project.hive__hive-jdbc__exclusion_6>${hive.group}__hive-service</m:dependency.management__org.spark-project.hive__hive-jdbc__exclusion_6>
+		<m:dependency.management__org.spark-project.hive__hive-jdbc__exclusion_5>${hive.group}__hive-common</m:dependency.management__org.spark-project.hive__hive-jdbc__exclusion_5>
+		<m:dependency.management__log4j__log4j__version>1.2.17</m:dependency.management__log4j__log4j__version>
+		<m:dependency.management__org.spark-project.hive__hive-jdbc__exclusion_8>org.slf4j__slf4j-log4j12</m:dependency.management__org.spark-project.hive__hive-jdbc__exclusion_8>
+		<m:properties__commons-codec.version>1.10</m:properties__commons-codec.version>
+		<m:dependency.management__org.spark-project.hive__hive-jdbc__exclusion_7>${hive.group}__hive-serde</m:dependency.management__org.spark-project.hive__hive-jdbc__exclusion_7>
+		<m:dependency.management__org.scalacheck__scalacheck_2.11__version>1.12.5</m:dependency.management__org.scalacheck__scalacheck_2.11__version>
+		<m:dependency.management__org.spark-project.hive__hive-jdbc__exclusion_2>org.apache.thrift__libfb303</m:dependency.management__org.spark-project.hive__hive-jdbc__exclusion_2>
+		<m:dependency.management__org.spark-project.hive__hive-jdbc__exclusion_1>${hive.group}__hive-shims</m:dependency.management__org.spark-project.hive__hive-jdbc__exclusion_1>
+		<m:dependency.management__org.spark-project.hive__hive-jdbc__exclusion_4>${hive.group}__hive-metastore</m:dependency.management__org.spark-project.hive__hive-jdbc__exclusion_4>
+		<m:dependency.management__org.spark-project.hive__hive-jdbc__exclusion_3>org.apache.thrift__libthrift</m:dependency.management__org.spark-project.hive__hive-jdbc__exclusion_3>
+		<m:dependency.management__org.spark-project.hive__hive-jdbc__exclusion_11>log4j__log4j</m:dependency.management__org.spark-project.hive__hive-jdbc__exclusion_11>
+		<m:dependency.management__org.apache.parquet__parquet-hadoop__version>1.7.0</m:dependency.management__org.apache.parquet__parquet-hadoop__version>
+		<m:dependency.management__org.spark-project.hive__hive-jdbc__exclusion_10>commons-logging__commons-logging</m:dependency.management__org.spark-project.hive__hive-jdbc__exclusion_10>
+		<m:properties__aws.kinesis.client.version>1.6.1</m:properties__aws.kinesis.client.version>
+		<m:dependency.management__org.spark-project.hive__hive-jdbc__exclusion_13>org.codehaus.groovy__groovy-all</m:dependency.management__org.spark-project.hive__hive-jdbc__exclusion_13>
+		<m:dependency.management__org.spark-project.hive__hive-jdbc__exclusion_12>org.apache.zookeeper__zookeeper</m:dependency.management__org.spark-project.hive__hive-jdbc__exclusion_12>
+		<m:dependency.management__org.spark-project.hive__hive-shims__exclusion_9>com.google.guava__guava</m:dependency.management__org.spark-project.hive__hive-shims__exclusion_9>
+		<m:dependency.management__org.spark-project.hive__hive-jdbc__exclusion_9>org.slf4j__slf4j-api</m:dependency.management__org.spark-project.hive__hive-jdbc__exclusion_9>
+		<m:dependency.management__org.spark-project.hive__hive-jdbc__exclusion_14>${hive.group}__hive-common</m:dependency.management__org.spark-project.hive__hive-jdbc__exclusion_14>
+		<m:dependency.management__org.spark-project.hive__hive-shims__exclusion_8>org.apache.hadoop__hadoop-yarn-server-resourcemanager</m:dependency.management__org.spark-project.hive__hive-shims__exclusion_8>
+		<m:dependency.management__org.spark-project.hive__hive-shims__exclusion_7>org.apache.curator__curator-framework</m:dependency.management__org.spark-project.hive__hive-shims__exclusion_7>
+		<m:dependency.management__org.spark-project.hive__hive-shims__exclusion_6>org.apache.thrift__libthrift</m:dependency.management__org.spark-project.hive__hive-shims__exclusion_6>
+		<m:dependency.management__org.spark-project.hive__hive-shims__exclusion_5>org.apache.zookeeper__zookeeper</m:dependency.management__org.spark-project.hive__hive-shims__exclusion_5>
+		<m:dependency.management__org.spark-project.hive__hive-shims__exclusion_4>org.slf4j__slf4j-api</m:dependency.management__org.spark-project.hive__hive-shims__exclusion_4>
+		<m:dependency.management__org.spark-project.hive__hive-shims__exclusion_3>org.slf4j__slf4j-log4j12</m:dependency.management__org.spark-project.hive__hive-shims__exclusion_3>
+		<m:dependency.management__org.spark-project.hive__hive-shims__exclusion_2>log4j__log4j</m:dependency.management__org.spark-project.hive__hive-shims__exclusion_2>
+		<m:dependency.management__org.spark-project.hive__hive-shims__exclusion_1>commons-logging__commons-logging</m:dependency.management__org.spark-project.hive__hive-shims__exclusion_1>
+		<m:properties__java.version>1.7</m:properties__java.version>
+		<m:dependency.management__org.spark-project.hive__hive-shims__exclusion_0>org.codehaus.groovy__groovy-all</m:dependency.management__org.spark-project.hive__hive-shims__exclusion_0>
+		<m:dependency.management__org.spark-project.hive__hive-common__scope>compile</m:dependency.management__org.spark-project.hive__hive-common__scope>
+		<m:properties__build.testJarPhase>prepare-package</m:properties__build.testJarPhase>
+		<m:dependency.management__org.json4s__json4s-jackson_2.11__version>3.2.11</m:dependency.management__org.json4s__json4s-jackson_2.11__version>
+		<m:dependency.management__org.slf4j__jul-to-slf4j__version>1.7.16</m:dependency.management__org.slf4j__jul-to-slf4j__version>
+		<m:dependency.management__com.fasterxml.jackson.module__jackson-module-scala_2.11__exclusion_0>com.google.guava__guava</m:dependency.management__com.fasterxml.jackson.module__jackson-module-scala_2.11__exclusion_0>
+		<m:properties__hive.deps.scope>compile</m:properties__hive.deps.scope>
+		<m:properties__jersey.version>2.22.2</m:properties__jersey.version>
+		<m:dependency.management__javax.ws.rs__javax.ws.rs-api__version>2.0.1</m:dependency.management__javax.ws.rs__javax.ws.rs-api__version>
+		<m:properties__oro.version>2.0.8</m:properties__oro.version>
+		<m:dependency.management__org.apache.hadoop__hadoop-yarn-client__version>2.2.0</m:dependency.management__org.apache.hadoop__hadoop-yarn-client__version>
+		<m:properties__parquet.deps.scope>compile</m:properties__parquet.deps.scope>
+		<m:dependency.management__org.glassfish.jersey.containers__jersey-container-servlet-core__version>2.22.2</m:dependency.management__org.glassfish.jersey.containers__jersey-container-servlet-core__version>
+		<m:properties__snappy.version>1.1.2.4</m:properties__snappy.version>
+		<m:dependency.management__org.codehaus.jackson__jackson-jaxrs__version>1.9.13</m:dependency.management__org.codehaus.jackson__jackson-jaxrs__version>
+		<m:properties__antlr4.version>4.5.3</m:properties__antlr4.version>
+		<m:properties__janino.version>2.7.8</m:properties__janino.version>
+		<m:dependency.management__org.apache.avro__avro-ipc__scope>test</m:dependency.management__org.apache.avro__avro-ipc__scope>
+		<m:properties__avro.mapred.classifier>hadoop2</m:properties__avro.mapred.classifier>
+		<m:properties__maven.version>3.3.9</m:properties__maven.version>
+		<m:dependency.management__org.apache.avro__avro-mapred__exclusion_1>io.netty__netty</m:dependency.management__org.apache.avro__avro-mapred__exclusion_1>
+		<m:dependency.management__org.apache.avro__avro-mapred__exclusion_0>org.mortbay.jetty__jetty</m:dependency.management__org.apache.avro__avro-mapred__exclusion_0>
+		<m:properties__derby.version>10.11.1.1</m:properties__derby.version>
+		<m:dependency.management__org.apache.avro__avro-mapred__exclusion_3>org.mortbay.jetty__jetty-util</m:dependency.management__org.apache.avro__avro-mapred__exclusion_3>
+		<m:dependency.management__org.apache.avro__avro-mapred__exclusion_2>org.mortbay.jetty__servlet-api</m:dependency.management__org.apache.avro__avro-mapred__exclusion_2>
+		<m:properties__spark.test.home>${session.executionRootDirectory}</m:properties__spark.test.home>
+		<m:properties__PermGen>64m</m:properties__PermGen>
+		<m:dependency.management__org.apache.avro__avro-mapred__exclusion_4>org.apache.velocity__velocity</m:dependency.management__org.apache.avro__avro-mapred__exclusion_4>
+		<m:dependency.management__org.spark-project.hive__hive-serde__exclusion_11>commons-logging__commons-logging</m:dependency.management__org.spark-project.hive__hive-serde__exclusion_11>
+		<m:dependency.management__org.spark-project.hive__hive-serde__exclusion_10>org.codehaus.groovy__groovy-all</m:dependency.management__org.spark-project.hive__hive-serde__exclusion_10>
+		<m:properties__commons.httpclient.version>4.5.2</m:properties__commons.httpclient.version>
+		<m:properties__jpam.version>1.1</m:properties__jpam.version>
+		<m:dependency.management__xml-apis__xml-apis__version>1.4.01</m:dependency.management__xml-apis__xml-apis__version>
+		<m:properties__yarn.version>${hadoop.version}</m:properties__yarn.version>
+		<m:dependency.management__org.spark-project.hive__hive-metastore__exclusion_0>${hive.group}__hive-serde</m:dependency.management__org.spark-project.hive__hive-metastore__exclusion_0>
+		<m:dependency.management__org.spark-project.hive__hive-metastore__exclusion_1>${hive.group}__hive-shims</m:dependency.management__org.spark-project.hive__hive-metastore__exclusion_1>
+		<m:dependency.management__org.spark-project.hive__hive-jdbc__exclusion_0>org.apache.curator__curator-framework</m:dependency.management__org.spark-project.hive__hive-jdbc__exclusion_0>
+		<m:dependency.management__org.spark-project.hive__hive-metastore__exclusion_2>org.apache.thrift__libfb303</m:dependency.management__org.spark-project.hive__hive-metastore__exclusion_2>
+		<m:dependency.management__org.spark-project.hive__hive-metastore__exclusion_3>org.apache.thrift__libthrift</m:dependency.management__org.spark-project.hive__hive-metastore__exclusion_3>
+		<m:dependency.management__org.spark-project.hive__hive-metastore__exclusion_4>org.mortbay.jetty__servlet-api</m:dependency.management__org.spark-project.hive__hive-metastore__exclusion_4>
+		<m:properties__build.copyDependenciesPhase>none</m:properties__build.copyDependenciesPhase>
+		<m:dependency.management__org.spark-project.hive__hive-metastore__exclusion_5>com.google.guava__guava</m:dependency.management__org.spark-project.hive__hive-metastore__exclusion_5>
+		<m:dependency.management__org.spark-project.hive__hive-metastore__exclusion_6>org.slf4j__slf4j-api</m:dependency.management__org.spark-project.hive__hive-metastore__exclusion_6>
+		<m:dependency.management__org.spark-project.hive__hive-metastore__exclusion_7>org.slf4j__slf4j-log4j12</m:dependency.management__org.spark-project.hive__hive-metastore__exclusion_7>
+		<m:dependency.management__org.spark-project.hive__hive-exec__exclusion_3>org.apache.curator__curator-client</m:dependency.management__org.spark-project.hive__hive-exec__exclusion_3>
+		<m:dependency.management__org.spark-project.hive__hive-exec__exclusion_4>log4j__log4j</m:dependency.management__org.spark-project.hive__hive-exec__exclusion_4>
+		<m:dependency.management__org.spark-project.hive__hive-exec__exclusion_5>org.slf4j__slf4j-log4j12</m:dependency.management__org.spark-project.hive__hive-exec__exclusion_5>
+		<m:dependency.management__org.spark-project.hive__hive-exec__exclusion_6>org.slf4j__slf4j-api</m:dependency.management__org.spark-project.hive__hive-exec__exclusion_6>
+		<m:dependency.management__org.spark-project.hive__hive-exec__exclusion_0>org.apache.thrift__libfb303</m:dependency.management__org.spark-project.hive__hive-exec__exclusion_0>
+		<m:dependency.management__org.seleniumhq.selenium__selenium-java__scope>test</m:dependency.management__org.seleniumhq.selenium__selenium-java__scope>
+		<m:dependency.management__org.spark-project.hive__hive-exec__exclusion_1>org.apache.thrift__libthrift</m:dependency.management__org.spark-project.hive__hive-exec__exclusion_1>
+		<m:dependency.management__com.twitter__parquet-hadoop-bundle__scope>compile</m:dependency.management__com.twitter__parquet-hadoop-bundle__scope>
+		<m:dependency.management__org.spark-project.hive__hive-exec__exclusion_2>org.apache.curator__curator-framework</m:dependency.management__org.spark-project.hive__hive-exec__exclusion_2>
+		<m:dependency.management__com.twitter__chill_2.11__version>0.8.0</m:dependency.management__com.twitter__chill_2.11__version>
+		<m:dependency.management__commons-io__commons-io__version>2.4</m:dependency.management__commons-io__commons-io__version>
+		<m:dependency.management__org.scala-lang__scala-compiler__version>2.11.8</m:dependency.management__org.scala-lang__scala-compiler__version>
+		<m:dependency.management__org.postgresql__postgresql__version>9.4.1207.jre7</m:dependency.management__org.postgresql__postgresql__version>
+		<m:dependency.management__org.codehaus.jackson__jackson-mapper-asl__version>1.9.13</m:dependency.management__org.codehaus.jackson__jackson-mapper-asl__version>
+		<m:properties__jline.groupid>org.scala-lang</m:properties__jline.groupid>
+		<m:dependency.management__org.apache.avro__avro__scope>compile</m:dependency.management__org.apache.avro__avro__scope>
+		<m:dependency.management__org.scala-lang__scala-reflect__version>2.11.8</m:dependency.management__org.scala-lang__scala-reflect__version>
+		<m:dependency.management__org.spark-project.hive__hive-exec__exclusion_7>org.apache.zookeeper__zookeeper</m:dependency.management__org.spark-project.hive__hive-exec__exclusion_7>
+		<m:dependency.management__org.apache.calcite__calcite-avatica__exclusion_0>com.fasterxml.jackson.core__jackson-annotations</m:dependency.management__org.apache.calcite__calcite-avatica__exclusion_0>
+		<m:dependency.management__org.spark-project.hive__hive-exec__exclusion_8>org.apache.curator__apache-curator</m:dependency.management__org.spark-project.hive__hive-exec__exclusion_8>
+		<m:dependency.management__org.apache.calcite__calcite-avatica__exclusion_1>com.fasterxml.jackson.core__jackson-core</m:dependency.management__org.apache.calcite__calcite-avatica__exclusion_1>
+		<m:dependency.management__org.spark-project.hive__hive-exec__exclusion_9>org.apache.calcite__calcite-core</m:dependency.management__org.spark-project.hive__hive-exec__exclusion_9>
+		<m:dependency.management__org.apache.calcite__calcite-avatica__exclusion_2>com.fasterxml.jackson.core__jackson-databind</m:dependency.management__org.apache.calcite__calcite-avatica__exclusion_2>
+		<m:dependency.management__org.spark-project.hive__hive-shims__scope>compile</m:dependency.management__org.spark-project.hive__hive-shims__scope>
+		<m:properties__jets3t.version>0.7.1</m:properties__jets3t.version>
+		<m:dependency.management__org.apache.parquet__parquet-avro__version>1.7.0</m:dependency.management__org.apache.parquet__parquet-avro__version>
+		<m:dependency.management__joda-time__joda-time__version>2.9.3</m:dependency.management__joda-time__joda-time__version>
+	</info>
+	<configurations>
+		<conf name="default" visibility="public" description="runtime dependencies and master artifact can be used with this conf" extends="runtime,master"/>
+		<conf name="master" visibility="public" description="contains only the artifact published by this module itself, with no transitive dependencies"/>
+		<conf name="compile" visibility="public" description="this is the default scope, used if none is specified. Compile dependencies are available in all classpaths."/>
+		<conf name="provided" visibility="public" description="this is much like compile, but indicates you expect the JDK or a container to provide it. It is only available on the compilation classpath, and is not transitive."/>
+		<conf name="runtime" visibility="public" description="this scope indicates that the dependency is not required for compilation, but is for execution. It is in the runtime and test classpaths, but not the compile classpath." extends="compile"/>
+		<conf name="test" visibility="private" description="this scope indicates that the dependency is not required for normal use of the application, and is only available for the test compilation and execution phases." extends="runtime"/>
+		<conf name="system" visibility="public" description="this scope is similar to provided except that you have to provide the JAR which contains it explicitly. The artifact is always available and is not looked up in a repository."/>
+		<conf name="sources" visibility="public" description="this configuration contains the source artifact of this module, if any."/>
+		<conf name="javadoc" visibility="public" description="this configuration contains the javadoc artifact of this module, if any."/>
+		<conf name="optional" visibility="public" description="contains all optional dependencies"/>
+	</configurations>
+	<publications>
+		<artifact name="spark-streaming_2.11" type="jar" ext="jar" conf="master"/>
+	</publications>
+	<dependencies>
+		<dependency org="org.apache.spark" name="spark-core_2.11" rev="2.0.0" force="true" conf="compile->compile(*),master(compile);runtime->runtime(*);test->runtime(*),master(compile)">
+			<artifact name="spark-core_2.11" type="jar" ext="jar" conf="compile,runtime"/>
+			<artifact name="spark-core_2.11" type="test-jar" ext="jar" conf="test" m:classifier="tests"/>
+			<exclude org="org.eclipse.jetty" module="jetty-security" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.eclipse.jetty" module="jetty-continuation" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.spark" name="spark-tags_2.11" rev="2.0.0" force="true" conf="compile->compile(*),master(compile);runtime->runtime(*)"/>
+		<dependency org="com.google.guava" name="guava" rev="14.0.1" force="true" conf="provided->compile(*),provided(*),runtime(*),master(compile)"/>
+		<dependency org="org.eclipse.jetty" name="jetty-server" rev="9.2.16.v20160414" force="true" conf="provided->compile(*),provided(*),runtime(*),master(compile)">
+			<exclude org="org.eclipse.jetty" module="jetty-io" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.eclipse.jetty" name="jetty-plus" rev="9.2.16.v20160414" force="true" conf="provided->compile(*),provided(*),runtime(*),master(compile)">
+			<exclude org="org.eclipse.jetty" module="jetty-webapp" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.eclipse.jetty" module="jetty-jndi" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.eclipse.jetty" name="jetty-util" rev="9.2.16.v20160414" force="true" conf="provided->compile(*),provided(*),runtime(*),master(compile)"/>
+		<dependency org="org.eclipse.jetty" name="jetty-http" rev="9.2.16.v20160414" force="true" conf="provided->compile(*),provided(*),runtime(*),master(compile)"/>
+		<dependency org="org.eclipse.jetty" name="jetty-servlet" rev="9.2.16.v20160414" force="true" conf="provided->compile(*),provided(*),runtime(*),master(compile)">
+			<exclude org="org.eclipse.jetty" module="jetty-security" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.eclipse.jetty" name="jetty-servlets" rev="9.2.16.v20160414" force="true" conf="provided->compile(*),provided(*),runtime(*),master(compile)">
+			<exclude org="org.eclipse.jetty" module="jetty-io" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.eclipse.jetty" module="jetty-continuation" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.scala-lang" name="scala-library" rev="2.11.8" force="true" conf="compile->compile(*),master(compile);runtime->runtime(*)"/>
+		<dependency org="org.scalacheck" name="scalacheck_2.11" rev="1.12.5" force="true" conf="test->runtime(*),master(compile)">
+			<exclude org="org.scala-sbt" module="test-interface" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.seleniumhq.selenium" name="selenium-java" rev="2.52.0" force="true" conf="test->runtime(*),master(compile)">
+			<exclude org="com.google.guava" module="guava" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="io.netty" module="netty" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.seleniumhq.selenium" module="selenium-chrome-driver" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.seleniumhq.selenium" module="selenium-edge-driver" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.seleniumhq.selenium" module="selenium-firefox-driver" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.seleniumhq.selenium" module="selenium-ie-driver" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.seleniumhq.selenium" module="selenium-safari-driver" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.seleniumhq.selenium" module="selenium-support" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.webbitserver" module="webbit" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.seleniumhq.selenium" module="selenium-leg-rc" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.seleniumhq.selenium" name="selenium-htmlunit-driver" rev="2.52.0" force="true" conf="test->runtime(*),master(compile)">
+			<exclude org="net.sourceforge.htmlunit" module="htmlunit" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.apache.httpcomponents" module="httpclient" name="*" type="*" ext="*" conf="" matcher="exact"/>
+			<exclude org="org.seleniumhq.selenium" module="selenium-support" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.mockito" name="mockito-core" rev="1.10.19" force="true" conf="test->runtime(*),master(compile)">
+			<exclude org="org.hamcrest" module="hamcrest-core" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.scalatest" name="scalatest_2.11" rev="2.2.6" force="true" conf="test->runtime(*),master(compile)"/>
+		<dependency org="org.scalatest" name="scalatest_2.11" rev="2.2.6" force="true" conf="test->runtime(*),master(compile)"/>
+		<dependency org="junit" name="junit" rev="4.12" force="true" conf="test->runtime(*),master(compile)"/>
+		<dependency org="junit" name="junit" rev="4.12" force="true" conf="test->runtime(*),master(compile)">
+			<exclude org="org.hamcrest" module="hamcrest-core" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="com.novocode" name="junit-interface" rev="0.11" force="true" conf="test->runtime(*),master(compile)"/>
+		<dependency org="com.novocode" name="junit-interface" rev="0.11" force="true" conf="test->runtime(*),master(compile)">
+			<exclude org="org.scala-sbt" module="test-interface" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.spark-project.spark" name="unused" rev="1.0.0" force="true" conf="compile->compile(*),master(compile);runtime->runtime(*)"/>
+	</dependencies>
+</ivy-module>
