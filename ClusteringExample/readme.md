@@ -41,7 +41,7 @@ distances using: ``` clusters.computeCost( data ) ```
 Given a new data point, to classify which cluster this data point
 belongs to, we can use : ``` clusters.predict ( data )```
 
-Code is given by MNIST_Kmeans.py. 
+Example code given by  MNIST_Kmeans.py. To run the code ``` <path-to-spark>/bin/spark-submit mnist_kmeans.py ```
 
 Note, if you wanted to apply hierarchical clustering, then use Bisecting KMeans instead.
 
@@ -61,17 +61,17 @@ LDA assumes documents are produced from a mixture of topics. Those topics then g
 
 2. Determine the mixture of topics in that document. For example, the document might contain 1/2 the topic 'health' and 1/2 the topic 'vegetables'.
 
-3.  Using each topic's multinomial distribution, output words to fill the documents word slots. In our example, the health topic is 1/2 our document, or 3 words. The health topic might have the word diet at 20\% probability or Äúexercise at 15\%, so it will fill the document word slots based on those probabilities.
+3.  Using each topic's multinomial distribution, output words to fill the documents word slots. In our example, the health topic is 1/2 our document, or 3 words. The health topic might have the word diet at 20\% probability or exercise at 15\%, so it will fill the document word slots based on those probabilities.
 
 Given this assumption of how documents are created, LDA backtracks and tries to figure out what topics would create those documents in the first place.
 
-Data cleaning is absolutely crucial for generating a useful topic model: as the saying goes, Äúgarbage in, garbage out.Äù The steps below are common to most natural language processing methods:
+Data cleaning is absolutely crucial for generating a useful topic model: as the saying goes, 'garbage in, garbage out.' The steps below are common to most natural language processing methods:
 
 -   Tokenizing: converting a document to its atomic elements.
 
 -   Stopping: removing meaningless words.
 
-See Topics_LDA.py
+Example given by topics_lda.py. To run the code ``` <path-to-spark>/bin/spark-submit topics_lda.py ```
 
 ## Part 3 - Clustering Tweets By Language 
 
@@ -112,4 +112,4 @@ Assume we have the above graph, we can see that there are basically two
 cliques in the graph assuming that each edge has an equal weight. Our
 goal is to find an accurate cut in the graph.
 
-Graph_pic.py provides example code.
+Example code given by  graph_pic.py. To run the code ``` <path-to-spark>/bin/spark-submit graph_pic.py ```
