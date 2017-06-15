@@ -1,18 +1,16 @@
-#Examples of Clustering on Spark
+# Examples of Clustering on Spark
 
-##Part 1 - MNIST Clustering Example
-=====
+## Part 1 - MNIST Clustering Example
 
 The MNIST dataset of handwritten digits (derived from a larger dataset called NIST). Its initial purpose was to train classifiers to understand hand-written postal addresses.
 
 Each image is of size 28 x 28, where each pixel value is between 0‚Äì255. This tutorial walks you through how to apply KMeans to cluster these images.
 
-=== Step 1 ‚Äì Feature Extraction ===
+-- Step 1 ‚Äì Feature Extraction --
 
 First, we need to decide how to extract features from the raw images. One idea is to transform the 2-D image (28 x 28) into a flat vector (of size 784). The vector values must be normalized so that each entry is between 0 and 1.
 
-![](media/image2.png){width="0.9520833333333333in"
-height="0.7188418635170604in"}
+![](media/image2.png)
 
 We will use the sum squared euclidian distance to compare two vectors.
 $\text{Given}\ X = \left\{ x_{1}\ ,\ x_{2},\ \cdots,\ x_{784} \right\}$
@@ -20,7 +18,7 @@ and $Y = \left\{ y_{1}\ ,\ y_{2},\ \cdots,\ y_{784} \right\}$, the
 distance between the two vectors is given by: *d( X , Y ) =*
 $\sum_{i = 1}^{784}{\ (x_{i} - y_{i})}^{2}$
 
-***Step 2 ‚Äì Train KMeans***
+-- Step 2 ‚Äì Train KMeans --
 
 We will use PYSpark and MLlib for this problem. Will feed-in the raw
 data to KMeans and train the model, and then evaluate the resulting
@@ -28,47 +26,32 @@ model.
 
 You can download the data from : <http://yann.lecun.com/exdb/mnist/>
 
-**Sample Code **
+```python
+mnist\_train = sc.textFile(fileNameTrain) \# ingest the comma delimited file
 
-> mnist\_train = sc.textFile(fileNameTrain) \# ingest the comma
-> delimited file
->
-> def parsePoint(line):
->
-> values = line.split(',‚Äô)
->
-> values = \[0 if e == '' else int(e) for e in values\]
->
-> return values\[1:\] *\# values\[0\] is the label, which can be
-> discarded*
->
-> mnist\_train = mnist\_train.filter(lambda x:x !=header) *\# remove the
-> header (1^st^ line)*
->
-> parsedData = data.map(parsePoint) *\# parse file into a RDD of lists *
->
-> clusters = KMeans.train(trainingData, 2,
-> maxIterations=10,initializationMode="random")
+def parsePoint(line):
+	values = line.split(',‚Äô)
+	values = \[0 if e == '' else int(e) for e in values\]
+	return values\[1:\] *\# values\[0\] is the label, which can be discarded*
+
+mnist\_train = mnist\_train.filter(lambda x:x !=header) *\# remove the header (1^st^ line)*
+
+parsedData = data.map(parsePoint) *\# parse file into a RDD of lists *
+
+clusters = KMeans.train(trainingData, 2, maxIterations=10,initializationMode="random")
+```
 
 Once we have obtained the clusters, we can compute the sum of squared
-distances using:
-
-clusters.computeCost( data )
+distances using: ``` clusters.computeCost( data ) ```
 
 Given a new data point, to classify which cluster this data point
-belongs to, we can use :
+belongs to, we can use : ``` clusters.predict ( data )```
 
-clusters.predict ( data )
+Code is given by MNIST\_Kmeans.py. 
 
-Code is given by MNIST\_Kmeans.py. To run the example using Spark, type:
+Note, if you wanted to apply hierarchical clustering, then use Bisecting KMeans instead.
 
-&lt;path-to-spark&gt;/bin/spark-submit MNIST\_KMeans.py
-
-Note, if you wanted to apply hierarchical clustering, then use Bisecting
-KMeans instead.
-
-##Part 2 ‚Äì LDA for Document Clustering 
-======
+## Part 2 ‚Äì LDA for Document Clustering 
 
 Consider the problem of clustering documents, possibly based on topics.
 One approach is to apply the standard KMeans algorithm using Cosine
@@ -86,15 +69,15 @@ LDA assumes documents are produced from a mixture of topics. Those
 topics then generate words based on their probability distribution. In
 other words, LDA assumes a document is made from the following steps:
 
-1.  Determine the number of words in a document. Let‚Äôs say our document has 6 words.
+1.  Determine the number of words in a document. LetÄôs say our document has 6 words.
 
-2.  Determine the mixture of topics in that document. For example, the document might contain 1/2 the topic ‚Äúhealth‚Äù and 1/2 the topic ‚Äúvegetables.‚Äù
+2.  Determine the mixture of topics in that document. For example, the document might contain 1/2 the topic Äúhealth and 1/2 the topic Äúvegetables.
 
-3.  Using each topic‚Äôs multinomial distribution, output words to fill the document‚Äôs word slots. In our example, the ‚Äúhealth‚Äù topic is 1/2 our document, or 3 words. The ‚Äúhealth‚Äù topic might have the word ‚Äúdiet‚Äù at 20% probability or ‚Äúexercise‚Äù at 15%, so it will fill the document word slots based on those probabilities.
+3.  Using each topicÄôs multinomial distribution, output words to fill the documentÄôs word slots. In our example, the health topic is 1/2 our document, or 3 words. The health topic might have the word diet at 20\% probability or Äúexercise at 15\%, so it will fill the document word slots based on those probabilities.
 
 Given this assumption of how documents are created, LDA backtracks and tries to figure out what topics would create those documents in the first place.
 
-Data cleaning is absolutely crucial for generating a useful topic model: as the saying goes, ‚Äúgarbage in, garbage out.‚Äù The steps below are common to most natural language processing methods:
+Data cleaning is absolutely crucial for generating a useful topic model: as the saying goes, Äúgarbage in, garbage out.Äù The steps below are common to most natural language processing methods:
 
 -   Tokenizing: converting a document to its atomic elements.
 
@@ -102,8 +85,7 @@ Data cleaning is absolutely crucial for generating a useful topic model: as the 
 
 See Topics\_LDA.py
 
-## Part 3 ‚Äì Clustering Tweets By Language 
-=========================================
+## Part 3 - Clustering Tweets By Language 
 
 Tweets are mostly raw, not tagged with geo location or language. One task is to use KMeans to cluster a training set of tweets by language.
 Then, given a new tweet, classify the cluster this tweet belongs to and hence classify the language of the tweet.
@@ -111,7 +93,7 @@ Then, given a new tweet, classify the cluster this tweet belongs to and hence cl
 The full tutorial is found here:
 <https://databricks.gitbooks.io/databricks-spark-reference-applications/twitter_classifier/index.html>
 
-*Part 4 ‚Äì Power Iteration Clustering*
+## Part 4 - Power Iteration Clustering 
 =====================================
 
 KMeans has several weaknesses, including:
